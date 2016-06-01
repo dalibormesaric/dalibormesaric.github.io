@@ -81,7 +81,7 @@
 
   //Back to top
   $("#back-to-top").on('click', function(event ){
-    event.preventDefault();
+    event.metaKey = true;
     $('body,html').animate({scrollTop:0}, 600);
   });
 })(jQuery);
