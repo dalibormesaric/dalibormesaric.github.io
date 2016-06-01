@@ -80,8 +80,7 @@
   // }
 
   //Back to top
-  $("#back-to-top").on('click', function(event) {
-    $('body,html').animate({scrollTop:0}, 600);
-    $('.logo-wrap a').focus();
-  });
+  // $("#back-to-top").on('click', function(event) {
+  //   $('body,html').animate({scrollTop:0}, 600);
+  // });
 })(jQuery);
