@@ -17,12 +17,12 @@ else {
 }
 
   // Sidebar expend
-  $('#sidebar .sidebar-toggle').click(function(){
-    if($('#sidebar').hasClass('expend'))
-      $('#sidebar').removeClass('expend');
-    else
-      $('#sidebar').addClass('expend');
-  });
+  // $('#sidebar .sidebar-toggle').click(function(){
+  //   if($('#sidebar').hasClass('expend'))
+  //     $('#sidebar').removeClass('expend');
+  //   else
+  //     $('#sidebar').addClass('expend');
+  // });
 
   // Set thumbnail height
   function setThumbnailHeight(){
