@@ -27,7 +27,7 @@ else {
   // Set thumbnail height
   function setThumbnailHeight(){
     var width = $('.article-summary .thumbnail').width();
-    var height = 200 * width / 720;
+    var height = 200 * width / 800;
     $('.article-summary .thumbnail').height(height);
   }
   setThumbnailHeight();

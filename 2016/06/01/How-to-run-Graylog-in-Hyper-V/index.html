@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Change Request | Developer&#39;s Challenges</title>
+  <title>How to run Graylog in Hyper-V | Developer&#39;s Challenges</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Coding competitions are always a good motivator to try out new things. GitHub game jam gave me an idea for a game. The theme was “change” and it the spirit of software development, I chose to make Cha">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Change Request">
-<meta property="og:url" content="http://developerschallenges.com/changerequest/index.html">
+  <meta name="description" content="Graylog is a log management tool that I first discovered a couple of years ago. I appreciate logging and monitoring while developing software for both capturing errors and seeing if anyone is actuall">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to run Graylog in Hyper-V">
+<meta property="og:url" content="http://developerschallenges.com/2016/06/01/How-to-run-Graylog-in-Hyper-V/index.html">
 <meta property="og:site_name" content="Developer's Challenges">
-<meta property="og:description" content="Coding competitions are always a good motivator to try out new things. GitHub game jam gave me an idea for a game. The theme was “change” and it the spirit of software development, I chose to make Cha">
-<meta property="og:updated_time" content="2016-02-21T09:55:55.000Z">
+<meta property="og:description" content="Graylog is a log management tool that I first discovered a couple of years ago. I appreciate logging and monitoring while developing software for both capturing errors and seeing if anyone is actuall">
+<meta property="og:image" content="http://developerschallenges.com/images/How-to-run-Graylog-in-Hyper-V.png">
+<meta property="og:updated_time" content="2016-06-01T19:56:38.818Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Change Request">
-<meta name="twitter:description" content="Coding competitions are always a good motivator to try out new things. GitHub game jam gave me an idea for a game. The theme was “change” and it the spirit of software development, I chose to make Cha">
+<meta name="twitter:title" content="How to run Graylog in Hyper-V">
+<meta name="twitter:description" content="Graylog is a log management tool that I first discovered a couple of years ago. I appreciate logging and monitoring while developing software for both capturing errors and seeing if anyone is actuall">
+<meta name="twitter:image" content="http://developerschallenges.com/images/How-to-run-Graylog-in-Hyper-V.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -110,7 +112,7 @@ ga('send', 'pageview');
           <section id="main">
             <div class="main-body-content">
               
-  <article id="page-undefined" class="article article-single article-type-page" itemscope itemprop="blogPost">
+  <article id="post-How-to-run-Graylog-in-Hyper-V" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
       <!--  -->
       
@@ -118,26 +120,58 @@ ga('send', 'pageview');
           
   
     <h1 class="article-title" itemprop="name">
-      Change Request
+      How to run Graylog in Hyper-V
     </h1>
   
 
         </header>
       
 	  
+      <p class="article-byline">
+        <a href="/2016/06/01/How-to-run-Graylog-in-Hyper-V/" class="article-date">
+  <time datetime="2016-06-01T16:47:00.000Z" itemprop="datePublished">2016-06-01</time>
+</a>
+      </p>
+	  
       <div class="article-entry" itemprop="articleBody">
-        <p>Coding competitions are always a good motivator to try out new things. <a href="https://github.com/blog/1674-github-game-off-ii" target="_blank" rel="external">GitHub game jam</a> gave me an idea for a game. The theme was “change” and it the spirit of software development, I chose to make Change Request.</p>
-<p>The gameplay is inspired by the game Icy Tower, where you can climb up indefinitely (similar with how software development works), and on the way you have to mark tasks as completed. But, of course, while you are mid-air someone changes the spec and you have to solve a different task, which sometimes makes you fall all the way down :)</p>
-<p><a href="/changerequest/demo">Demo</a></p>
+        <p><img src="/images/How-to-run-Graylog-in-Hyper-V.png"></p>
+<p><a href="https://www.graylog.org/" target="_blank" rel="external">Graylog</a> is a log management tool that I first discovered a couple of years ago. I appreciate logging and monitoring while developing software for both capturing errors and seeing if anyone is actually using/testing the features you implemented.<br><a id="more"></a></p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Having a centralized log management tool is very convenient to have entire team aware of what is going on in software projects. Graylog is easy to set up and it has a nice dashboard with a powerful way of querying logs.</p>
+<p>When I first set up Graylog it was called Graylog2 and it was still in pre-release phase. Since I’m a windows developer, setting up all the dependencies through bash is not something I enjoy, but luckily I found a cool script by <a href="https://twitter.com/mrlesmithjr" target="_blank" rel="external">@mrlesmithjr</a> on his blog <a href="http://everythingshouldbevirtual.com/ubuntu-12-04-graylog2-installation" target="_blank" rel="external">http://everythingshouldbevirtual.com/ubuntu-12-04-graylog2-installation</a>. The process was pretty straightforward, and in couple of minutes I had Graylog2 running in Azure VM. After that all I had to was open a correct port and add GELF log4net provider, and logs started streaming in.</p>
+<p>Two years later, or now, I wanted to do the same thing, but of course the new versions of Graylog and its dependencies came out. So in order to run the latest and greatest I went back to the script I used the first time. Unfortunately, the author stopped the maintenance because he switched to a different way of managing software tools - using <a href="https://www.ansible.com/" target="_blank" rel="external">Ansible</a>. This is not something I am interested investing in at the moment. All I wanted was a Graylog server on my Hyper-V VM. How hard can that be?</p>
+<h2 id="Graylog-running-in-Hyper-V"><a href="#Graylog-running-in-Hyper-V" class="headerlink" title="Graylog running in Hyper-V"></a>Graylog running in Hyper-V</h2><p>When you go to the Graylog’s <a href="https://www.graylog.org/download" target="_blank" rel="external">download page</a> you get a number of options to choose from. But if you are a .NET developer you’ll see a lot of things you have never heard of. Feel free to explore a bit because you never know what you might find interesting. But to proceed with the mission of running Graylog in Hyper-V, <a href="https://en.wikipedia.org/wiki/Open_Virtualization_Format" target="_blank" rel="external"><strong>OVA</strong></a> is what you want.</p>
+<p><strong>OVA</strong> is an open standard for distributing virtual appliances. When you click the link on Graylog’s download page, you’ll see more details on how to use it inside <a href="https://www.virtualbox.org/" target="_blank" rel="external">VirtualBox</a>. You will also need to download VirtualBox in order to create a .VHD disk image that you will use in Hyper-V.</p>
+<p>Quick google search showed me how to get from .OVA to .VHD. You should rename the .OVA extension to .TAR and extract the archive in a folder, e.g. C:\vm</p>
+<p>After that just run the following command to get the .VHD disk image.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\Oracle\VirtualBox&gt;VBoxManage.exe clonehd --format vhd C:\vm\graylog-disk1.vmdk C:\vm\graylog.vhd</span><br></pre></td></tr></table></figure>
+<p>After that all you need to do is create a new Virtual Machine in Hyper-V, and attach the .VHD file. Make sure your VM has enough RAM (4GB is recommended as a good start)</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>To recap:</p>
+<ol>
+<li>Download <a href="http://docs.graylog.org/en/2.0/pages/installation/virtual_machine_appliances.html" target="_blank" rel="external">Graylog</a></li>
+<li>Download <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="external">VirtualBox</a></li>
+<li>Rename extension .OVA to .TAR and extract to <em>C:\vm</em></li>
+<li>Run <em>C:\Program Files\Oracle\VirtualBox&gt;VBoxManage.exe clonehd –format vhd C:\vm\graylog-disk1.vmdk C:\vm\graylog.vhd</em></li>
+<li>Create a VM with 4GB of RAM in Hyper-V and attach .VHD that you created</li>
+</ol>
 
       </div>
       <footer class="article-footer">
-        <a data-url="http://developerschallenges.com/changerequest/index.html" data-id="ciowxb8v90003r4sr7alwe3ta" class="article-share-link">Share</a>
+        <a data-url="http://developerschallenges.com/2016/06/01/How-to-run-Graylog-in-Hyper-V/" data-id="ciox3vazi0000n4srwople2zn" class="article-share-link">Share</a>
+        
+          <a href="http://developerschallenges.com/2016/06/01/How-to-run-Graylog-in-Hyper-V/#comments" class="article-comment-link">Comments</a>
         
         
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/graylog/">graylog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hyper-v/">hyper-v</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/logging/">logging</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/virtualbox/">virtualbox</a></li></ul>
+
       </footer>
     </div>
   </article>
+  
+    <section id="comments">
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </div>
+    </section>
   
 
             </div>
@@ -157,6 +191,8 @@ ga('send', 'pageview');
       
     </ul>
   </div>
+  
+    
   
   <div class="widgets-container">
     
@@ -238,6 +274,20 @@ ga('send', 'pageview');
   </div>
 </footer>
     
+<script>
+  var disqus_shortname = 'developerschallenges';
+  
+  var disqus_url = 'http://developerschallenges.com/2016/06/01/How-to-run-Graylog-in-Hyper-V/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
 
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
