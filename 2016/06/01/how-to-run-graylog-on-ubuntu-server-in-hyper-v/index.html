@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>How to run Graylog in Hyper-V | Developer&#39;s Challenges</title>
+  <title>How to run Graylog on Ubuntu Server in Hyper-V | Developer&#39;s Challenges</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="I wanted to set up Graylog log management on an Ubuntu Server running in Hyper-V. It has been a while since I did this, and couple of things have changed…">
+  <meta name="description" content="I wanted to set up Graylog log management on an Ubuntu Server running in Hyper-V. It has been a while since the last time I did this, and couple of things have changed…">
 <meta property="og:type" content="article">
-<meta property="og:title" content="How to run Graylog in Hyper-V">
-<meta property="og:url" content="http://developerschallenges.com/2016/06/01/how-to-run-graylog-in-hyper-v/index.html">
+<meta property="og:title" content="How to run Graylog on Ubuntu Server in Hyper-V">
+<meta property="og:url" content="http://developerschallenges.com/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/index.html">
 <meta property="og:site_name" content="Developer's Challenges">
-<meta property="og:description" content="I wanted to set up Graylog log management on an Ubuntu Server running in Hyper-V. It has been a while since I did this, and couple of things have changed…">
-<meta property="og:image" content="http://developerschallenges.com/images/How-to-run-Graylog-in-Hyper-V.png">
-<meta property="og:updated_time" content="2016-06-02T07:32:49.614Z">
+<meta property="og:description" content="I wanted to set up Graylog log management on an Ubuntu Server running in Hyper-V. It has been a while since the last time I did this, and couple of things have changed…">
+<meta property="og:image" content="http://developerschallenges.com/images/how-to-run-graylog-on-ubuntu-server-in-hyper-v.png">
+<meta property="og:updated_time" content="2016-06-02T14:14:31.030Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="How to run Graylog in Hyper-V">
-<meta name="twitter:description" content="I wanted to set up Graylog log management on an Ubuntu Server running in Hyper-V. It has been a while since I did this, and couple of things have changed…">
-<meta name="twitter:image" content="http://developerschallenges.com/images/How-to-run-Graylog-in-Hyper-V.png">
+<meta name="twitter:title" content="How to run Graylog on Ubuntu Server in Hyper-V">
+<meta name="twitter:description" content="I wanted to set up Graylog log management on an Ubuntu Server running in Hyper-V. It has been a while since the last time I did this, and couple of things have changed…">
+<meta name="twitter:image" content="http://developerschallenges.com/images/how-to-run-graylog-on-ubuntu-server-in-hyper-v.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -58,10 +58,6 @@ ga('send', 'pageview');
 
 
 
-  
-    <style type="text/css">
-      .logo { background-image:url(/header.png); }
-    </style>
   
 
   
@@ -112,7 +108,7 @@ ga('send', 'pageview');
           <section id="main">
             <div class="main-body-content">
               
-  <article id="post-how-to-run-graylog-in-hyper-v" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <article id="post-how-to-run-graylog-on-ubuntu-server-in-hyper-v" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
       <!--  -->
       
@@ -120,7 +116,7 @@ ga('send', 'pageview');
           
   
     <h1 class="article-title" itemprop="name">
-      How to run Graylog in Hyper-V
+      How to run Graylog on Ubuntu Server in Hyper-V
     </h1>
   
 
@@ -128,14 +124,14 @@ ga('send', 'pageview');
       
 	  
       <p class="article-byline">
-        <a href="/2016/06/01/how-to-run-graylog-in-hyper-v/" class="article-date">
+        <a href="/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/" class="article-date">
   <time datetime="2016-06-01T16:47:00.000Z" itemprop="datePublished">2016-06-01</time>
 </a>
       </p>
 	  
       <div class="article-entry" itemprop="articleBody">
-        <p><img src="/images/How-to-run-Graylog-in-Hyper-V.png"></p>
-<p>I wanted to set up Graylog log management on an Ubuntu Server running in Hyper-V. It has been a while since I did this, and couple of things have changed…<br><a id="more"></a></p>
+        <p><img src="/images/how-to-run-graylog-on-ubuntu-server-in-hyper-v.png"></p>
+<p>I wanted to set up Graylog log management on an Ubuntu Server running in Hyper-V. It has been a while since the last time I did this, and couple of things have changed…<br><a id="more"></a></p>
 <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p><a href="https://www.graylog.org/" target="_blank" rel="external">Graylog</a> is a log management tool that I first discovered a couple of years ago. I appreciate logging and monitoring while developing software for both capturing errors and seeing if anyone is actually using/testing the features you implemented. Having a centralized log management tool is very convenient to have an entire team aware of what is going on in software projects. Graylog is easy to set up and it has a nice dashboard with a powerful way of querying logs.</p>
 <p>When I first set up Graylog it was called Graylog2 and it was still in pre-release phase. I knew I want to run an Ubuntu Server instance in an Azure VM. Since I’m a windows developer, setting up all the dependencies through bash is not something I enjoy, but luckily I found a cool script by <a href="https://twitter.com/mrlesmithjr" target="_blank" rel="external">@mrlesmithjr</a> on his <a href="http://everythingshouldbevirtual.com/ubuntu-12-04-graylog2-installation" target="_blank" rel="external">blog</a>. The process was pretty straightforward, and in couple of minutes I had Graylog2 running in an Azure VM. After that, all I had to was open the correct port and add GELF log4net provider to my project, and logs started streaming in.</p>
 <p>Two years later, or now, I wanted to do the same thing, but of course the new versions of Graylog and its dependencies came out. So in order to run the latest and greatest I went back to the script I used the first time. Unfortunately, the author stopped the maintenance because he switched to a different way of managing software tools - using <a href="https://www.ansible.com/" target="_blank" rel="external">Ansible</a>. This is not something I am interested investing in at the moment. All I wanted was a Graylog server on my Hyper-V VM. How hard can that be?</p>
@@ -144,7 +140,7 @@ ga('send', 'pageview');
 <p>Quick google search showed me how to get from .OVA to .VHD. You should rename the .OVA extension to .TAR and extract the archive in a folder (e.g. C:\vm).</p>
 <p>After that just run the following command to get the .VHD disk image.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\Oracle\VirtualBox&gt;VBoxManage.exe clonehd --format vhd C:\vm\graylog-disk1.vmdk C:\vm\graylog.vhd</span><br></pre></td></tr></table></figure>
-<p>As a final step all you need to do is create a new Virtual Machine in Hyper-V, and attach the .VHD file. Make sure your VM has enough RAM (4GB is recommended as a good start).</p>
+<p>As a final step all you need to do is create a new Virtual Machine in Hyper-V, and attach the .VHD file. Make sure your VM has enough RAM (4GB is recommended).</p>
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>To recap:</p>
 <ol>
 <li>Download <a href="http://docs.graylog.org/en/2.0/pages/installation/virtual_machine_appliances.html" target="_blank" rel="external">Graylog</a></li>
@@ -156,9 +152,9 @@ ga('send', 'pageview');
 
       </div>
       <footer class="article-footer">
-        <a data-url="http://developerschallenges.com/2016/06/01/how-to-run-graylog-in-hyper-v/" data-id="cioxb3o2d0000nosrcb3paanx" class="article-share-link">Share</a>
+        <a data-url="http://developerschallenges.com/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/" data-id="cioydvoz10000go7dyhtva8if" class="article-share-link">Share</a>
         
-          <a href="http://developerschallenges.com/2016/06/01/how-to-run-graylog-in-hyper-v/#comments" class="article-comment-link">Comments</a>
+          <a href="http://developerschallenges.com/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/#comments" class="article-comment-link">Comments</a>
         
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/graylog/">graylog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hyper-v/">hyper-v</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/logging/">logging</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/virtualbox/">virtualbox</a></li></ul>
@@ -204,17 +200,17 @@ ga('send', 'pageview');
         
           <li>
             <div class="item-thumbnail">
-              <a href="/2016/06/01/how-to-run-graylog-in-hyper-v/" class="thumbnail">
+              <a href="/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/" class="thumbnail">
   
-    <span style="background-image:url(/images/How-to-run-Graylog-in-Hyper-V.png
-)" alt="How to run Graylog in Hyper-V" class="thumbnail-image"></span>
+    <span style="background-image:url(/images/how-to-run-graylog-on-ubuntu-server-in-hyper-v.png
+)" alt="How to run Graylog on Ubuntu Server in Hyper-V" class="thumbnail-image"></span>
   
 
 </a>
             </div>
             <div class="item-inner">
               <p class="item-category"></p>
-              <p class="item-title"><a href="/2016/06/01/how-to-run-graylog-in-hyper-v/" class="title">How to run Graylog in Hyper-V</a></p>
+              <p class="item-title"><a href="/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/" class="title">How to run Graylog on Ubuntu Server in Hyper-V</a></p>
               <p class="item-date"><time datetime="2016-06-01T16:47:00.000Z" itemprop="datePublished">2016-06-01</time></p>
             </div>
           </li>
@@ -277,7 +273,7 @@ ga('send', 'pageview');
 <script>
   var disqus_shortname = 'developerschallenges';
   
-  var disqus_url = 'http://developerschallenges.com/2016/06/01/how-to-run-graylog-in-hyper-v/';
+  var disqus_url = 'http://developerschallenges.com/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/';
   
   (function(){
     var dsq = document.createElement('script');
