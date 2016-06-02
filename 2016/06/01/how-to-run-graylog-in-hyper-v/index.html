@@ -5,17 +5,17 @@
   
   <title>How to run Graylog in Hyper-V | Developer&#39;s Challenges</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Graylog is a log management tool that I first discovered a couple of years ago. I appreciate logging and monitoring while developing software for both capturing errors and seeing if anyone is actuall">
+  <meta name="description" content="I wanted to set up Graylog log management on an Ubuntu Server in Hyper-V. It has been a while since I did this, and couple of things have changed…">
 <meta property="og:type" content="article">
 <meta property="og:title" content="How to run Graylog in Hyper-V">
 <meta property="og:url" content="http://developerschallenges.com/2016/06/01/how-to-run-graylog-in-hyper-v/index.html">
 <meta property="og:site_name" content="Developer's Challenges">
-<meta property="og:description" content="Graylog is a log management tool that I first discovered a couple of years ago. I appreciate logging and monitoring while developing software for both capturing errors and seeing if anyone is actuall">
+<meta property="og:description" content="I wanted to set up Graylog log management on an Ubuntu Server in Hyper-V. It has been a while since I did this, and couple of things have changed…">
 <meta property="og:image" content="http://developerschallenges.com/images/How-to-run-Graylog-in-Hyper-V.png">
-<meta property="og:updated_time" content="2016-06-01T20:38:46.644Z">
+<meta property="og:updated_time" content="2016-06-02T07:15:50.960Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to run Graylog in Hyper-V">
-<meta name="twitter:description" content="Graylog is a log management tool that I first discovered a couple of years ago. I appreciate logging and monitoring while developing software for both capturing errors and seeing if anyone is actuall">
+<meta name="twitter:description" content="I wanted to set up Graylog log management on an Ubuntu Server in Hyper-V. It has been a while since I did this, and couple of things have changed…">
 <meta name="twitter:image" content="http://developerschallenges.com/images/How-to-run-Graylog-in-Hyper-V.png">
   
   
@@ -135,9 +135,9 @@ ga('send', 'pageview');
 	  
       <div class="article-entry" itemprop="articleBody">
         <p><img src="/images/How-to-run-Graylog-in-Hyper-V.png"></p>
-<p><a href="https://www.graylog.org/" target="_blank" rel="external">Graylog</a> is a log management tool that I first discovered a couple of years ago. I appreciate logging and monitoring while developing software for both capturing errors and seeing if anyone is actually using/testing the features you implemented.<br><a id="more"></a></p>
-<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Having a centralized log management tool is very convenient to have entire team aware of what is going on in software projects. Graylog is easy to set up and it has a nice dashboard with a powerful way of querying logs.</p>
-<p>When I first set up Graylog it was called Graylog2 and it was still in pre-release phase. Since I’m a windows developer, setting up all the dependencies through bash is not something I enjoy, but luckily I found a cool script by <a href="https://twitter.com/mrlesmithjr" target="_blank" rel="external">@mrlesmithjr</a> on his <a href="http://everythingshouldbevirtual.com/ubuntu-12-04-graylog2-installation" target="_blank" rel="external">blog</a>. The process was pretty straightforward, and in couple of minutes I had Graylog2 running in Azure VM. After that, all I had to was open a correct port and add GELF log4net provider, and logs started streaming in.</p>
+<p>I wanted to set up Graylog log management on an Ubuntu Server in Hyper-V. It has been a while since I did this, and couple of things have changed…<br><a id="more"></a></p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p><a href="https://www.graylog.org/" target="_blank" rel="external">Graylog</a> is a log management tool that I first discovered a couple of years ago. I appreciate logging and monitoring while developing software for both capturing errors and seeing if anyone is actually using/testing the features you implemented. Having a centralized log management tool is very convenient to have entire team aware of what is going on in software projects. Graylog is easy to set up and it has a nice dashboard with a powerful way of querying logs.</p>
+<p>When I first set up Graylog it was called Graylog2 and it was still in pre-release phase. I knew I want to run an Ubuntu Server instance in an Azure VM. Since I’m a windows developer, setting up all the dependencies through bash is not something I enjoy, but luckily I found a cool script by <a href="https://twitter.com/mrlesmithjr" target="_blank" rel="external">@mrlesmithjr</a> on his <a href="http://everythingshouldbevirtual.com/ubuntu-12-04-graylog2-installation" target="_blank" rel="external">blog</a>. The process was pretty straightforward, and in couple of minutes I had Graylog2 running in Azure VM. After that, all I had to was open a correct port and add GELF log4net provider, and logs started streaming in.</p>
 <p>Two years later, or now, I wanted to do the same thing, but of course the new versions of Graylog and its dependencies came out. So in order to run the latest and greatest I went back to the script I used the first time. Unfortunately, the author stopped the maintenance because he switched to a different way of managing software tools - using <a href="https://www.ansible.com/" target="_blank" rel="external">Ansible</a>. This is not something I am interested investing in at the moment. All I wanted was a Graylog server on my Hyper-V VM. How hard can that be?</p>
 <h2 id="Graylog-running-in-Hyper-V"><a href="#Graylog-running-in-Hyper-V" class="headerlink" title="Graylog running in Hyper-V"></a>Graylog running in Hyper-V</h2><p>When you go to the Graylog’s <a href="https://www.graylog.org/download" target="_blank" rel="external">download page</a> you get a number of options to choose from. But if you are a .NET developer you’ll see a lot of things you have never heard of. Feel free to explore a bit because you never know what you might find interesting. But to proceed with the mission of running Graylog in Hyper-V, <a href="https://en.wikipedia.org/wiki/Open_Virtualization_Format" target="_blank" rel="external"><strong>OVA</strong></a> is what you want.</p>
 <p><strong>OVA</strong> is an open standard for distributing virtual appliances. When you click the link on Graylog’s download page, you’ll see more details on how to use it inside <a href="https://www.virtualbox.org/" target="_blank" rel="external">VirtualBox</a>. You will also need to download VirtualBox in order to create a .VHD disk image that you will use in Hyper-V.</p>
@@ -161,7 +161,7 @@ ga('send', 'pageview');
           <a href="http://developerschallenges.com/2016/06/01/how-to-run-graylog-in-hyper-v/#comments" class="article-comment-link">Comments</a>
         
         
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/graylog/">graylog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hyper-v/">hyper-v</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/logging/">logging</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/virtualbox/">virtualbox</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/graylog/">graylog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hyper-v/">hyper-v</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/logging/">logging</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/virtualbox/">virtualbox</a></li></ul>
 
       </footer>
     </div>
