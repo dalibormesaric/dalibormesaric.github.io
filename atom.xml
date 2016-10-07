@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://developerschallenges.com/"/>
-  <updated>2016-10-07T09:19:46.000Z</updated>
+  <updated>2016-10-07T18:05:34.000Z</updated>
   <id>https://developerschallenges.com/</id>
   
   <author>
@@ -16,11 +16,61 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>UX Rant - September 2016 Edition</title>
+    <link href="https://developerschallenges.com/2016/09/25/ux-rant---september-2016-edition/"/>
+    <id>https://developerschallenges.com/2016/09/25/ux-rant---september-2016-edition/</id>
+    <published>2016-09-25T07:37:42.000Z</published>
+    <updated>2016-10-07T18:05:34.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;/css/images/thumb-default.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;It looks like our proffession can’t agree on what the experiance on the web should be. Constant re-innovation just confuses me, so this is my rant.&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Google’s-Olympics-Widget&quot;&gt;&lt;a href=&quot;#Google’s-Olympics-Widget&quot; class=&quot;headerlink&quot; title=&quot;Google’s Olympics Widget&quot;&gt;&lt;/a&gt;Google’s Olympics Widget&lt;/h2&gt;&lt;p&gt;Last month there were the olympics, and Google made a nice widget in their search so it was easy so look up athletes and medals per country. During this period sometimes athletes make unexpected results and that was the case for some from my country. I used to do a google search for “Croatia olympics” to see the latest results. I wanted to look up some of the athletes from the widget in google search and learn more about them. How I usually do this, is select a text, right click and select search with google.&lt;/p&gt;
+&lt;p&gt;But it this case the whole thing was a button, even though it was also a text. It was imposible to select a text and to a right click or even copy the text to clipboard.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ux-rant---september-2016-edition/google-olympics22.gif&quot;&gt;&lt;/p&gt;
+&lt;p&gt;When it comes to web elements that should act on mouse click, the main ones are the button and the anchor element. Not the whole area behind the text with the text included. Especialy not with the right click. I hate when I lose my context and then have to go back to where I was just because of someone reinventing the button.&lt;/p&gt;
+&lt;h2 id=&quot;Twitter-Search&quot;&gt;&lt;a href=&quot;#Twitter-Search&quot; class=&quot;headerlink&quot; title=&quot;Twitter Search&quot;&gt;&lt;/a&gt;Twitter Search&lt;/h2&gt;&lt;p&gt;This was on my rant todo list for a while. It’s about moving content after something is loaded on your page. I use twitter as an example, but there are so many cases of this terribe UX.&lt;/p&gt;
+&lt;p&gt;When I search for someone and I know their name will show up first, I type first letters with my left hand, and use my right hand to point the mouse to the first place where I expect the result. Except the result position changes if I’m not fast enough, and I click on a random thing that shows up there even though I never asked for it.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ux-rant---september-2016-edition/twitter22.gif&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Keep your “smart suggestions” content elsewhere it you really need to show it. And stop moving content around. This is much more annoying when an ad shows up where I wanted to click on a link, and I end up clicking on the ad instead.&lt;/p&gt;
+&lt;h2 id=&quot;Google-Chrome-Backspace-Removal&quot;&gt;&lt;a href=&quot;#Google-Chrome-Backspace-Removal&quot; class=&quot;headerlink&quot; title=&quot;Google Chrome Backspace Removal&quot;&gt;&lt;/a&gt;Google Chrome Backspace Removal&lt;/h2&gt;&lt;p&gt;Web browsers should keep a promise of supporting the web that is, was and will be created. That goes with all surrounding experience in the browser. Navigation is very important, and the web is designed that you can navigate to new sites, but you always have to be able to go back.&lt;/p&gt;
+&lt;p&gt;I’m used to going back using backspace, and Chrome team invented new way of going back. Right Alt + Left Arrow. Try pressing that with one hand. Try it and feel the pain on the innovation. You can’t use the right Alt because that would rotate your screen in Windows.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ux-rant---september-2016-edition/backspace2.gif&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Then they released an extension that fixes this, arguing that this is how it should be handeled - throuhg an extension. Even though they removed the Chromecast extension and built it in the browser. These teams need to hang out together somethimes.&lt;/p&gt;
+&lt;p&gt;Some links on this &lt;em&gt;feature&lt;/em&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://bugs.chromium.org/p/chromium/issues/detail?id=608016&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://bugs.chromium.org/p/chromium/issues/detail?id=608016&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://mashable.com/2016/08/17/google-chrome-backspace-extension/#Gau3XrNaimqE&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://mashable.com/2016/08/17/google-chrome-backspace-extension/#Gau3XrNaimqE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.engadget.com/2016/08/17/chrome-go-back-with-backspace/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.engadget.com/2016/08/17/chrome-go-back-with-backspace/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://arstechnica.com/gadgets/2016/08/google-cast-gets-built-into-chrome/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://arstechnica.com/gadgets/2016/08/google-cast-gets-built-into-chrome/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;To record gifs I used &lt;a href=&quot;https://screentogif.codeplex.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ScreenToGif&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/css/images/thumb-default.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;It looks like our proffession can’t agree on what the experiance on the web should be. Constant re-innovation just confuses me, so this is my rant.&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="rant" scheme="https://developerschallenges.com/tags/rant/"/>
+    
+      <category term="google" scheme="https://developerschallenges.com/tags/google/"/>
+    
+      <category term="backspace" scheme="https://developerschallenges.com/tags/backspace/"/>
+    
+      <category term="ux" scheme="https://developerschallenges.com/tags/ux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>How to run Graylog on Ubuntu Server in Hyper-V</title>
     <link href="https://developerschallenges.com/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/"/>
     <id>https://developerschallenges.com/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/</id>
     <published>2016-06-01T16:47:00.000Z</published>
-    <updated>2016-10-07T09:19:46.000Z</updated>
+    <updated>2016-10-07T09:19:46.473Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;/images/how-to-run-graylog-on-ubuntu-server-in-hyper-v/how-to-run-graylog-on-ubuntu-server-in-hyper-v.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;I wanted to set up Graylog log management tool on an Ubuntu Server running in Hyper-V. It has been a while since the last time I did this, and couple of things have changed…&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
