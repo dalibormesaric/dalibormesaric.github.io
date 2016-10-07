@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://developerschallenges.com/"/>
-  <updated>2016-10-07T09:19:46.473Z</updated>
+  <updated>2016-10-07T09:19:46.000Z</updated>
   <id>https://developerschallenges.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://developerschallenges.com/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/"/>
     <id>https://developerschallenges.com/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/</id>
     <published>2016-06-01T16:47:00.000Z</published>
-    <updated>2016-10-07T09:19:46.473Z</updated>
+    <updated>2016-10-07T09:19:46.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;/images/how-to-run-graylog-on-ubuntu-server-in-hyper-v/how-to-run-graylog-on-ubuntu-server-in-hyper-v.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;I wanted to set up Graylog log management tool on an Ubuntu Server running in Hyper-V. It has been a while since the last time I did this, and couple of things have changed…&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
