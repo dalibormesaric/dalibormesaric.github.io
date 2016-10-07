@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Developer&#39;s Challenges</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://developerschallenges.com/"/>
+  <updated>2016-10-07T09:19:46.473Z</updated>
+  <id>https://developerschallenges.com/</id>
+  
+  <author>
+    <name>Dalibor Mesarić</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How to run Graylog on Ubuntu Server in Hyper-V</title>
+    <link href="https://developerschallenges.com/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/"/>
+    <id>https://developerschallenges.com/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/</id>
+    <published>2016-06-01T16:47:00.000Z</published>
+    <updated>2016-10-07T09:19:46.473Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;/images/how-to-run-graylog-on-ubuntu-server-in-hyper-v/how-to-run-graylog-on-ubuntu-server-in-hyper-v.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;I wanted to set up Graylog log management tool on an Ubuntu Server running in Hyper-V. It has been a while since the last time I did this, and couple of things have changed…&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.graylog.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Graylog&lt;/a&gt; is a log management tool that I first discovered a couple of years ago. I appreciate logging and monitoring while developing software for both capturing errors and seeing if anyone is actually using/testing the features you implemented. Having a centralized log management tool is very convenient to have an entire team aware of what is going on in software projects. Graylog is easy to set up and it has a nice dashboard with a powerful way of querying logs.&lt;/p&gt;
+&lt;p&gt;When I first set up Graylog it was called Graylog2 and it was still in pre-release phase. I knew I want to run an Ubuntu Server instance in an Azure VM. Since I’m a windows developer, setting up all the dependencies through bash is not something I enjoy, but luckily I found a cool script by &lt;a href=&quot;https://twitter.com/mrlesmithjr&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;@mrlesmithjr&lt;/a&gt; on his &lt;a href=&quot;http://everythingshouldbevirtual.com/ubuntu-12-04-graylog2-installation&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;blog&lt;/a&gt;. The process was pretty straightforward, and in couple of minutes I had Graylog2 running in an Azure VM. After that, all I had to was open the correct port and add GELF log4net provider to my project, and logs started streaming in.&lt;/p&gt;
+&lt;p&gt;Two years later, or now, I wanted to do the same thing, but of course the new versions of Graylog and its dependencies came out. So in order to run the latest and greatest I went back to the script I used the first time. Unfortunately, the author stopped the maintenance because he switched to a different way of managing software tools - using &lt;a href=&quot;https://www.ansible.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Ansible&lt;/a&gt;. This is not something I am interested investing in at the moment. All I wanted was a Graylog server on my Hyper-V VM. How hard can that be?&lt;/p&gt;
+&lt;h2 id=&quot;Graylog-running-in-Hyper-V&quot;&gt;&lt;a href=&quot;#Graylog-running-in-Hyper-V&quot; class=&quot;headerlink&quot; title=&quot;Graylog running in Hyper-V&quot;&gt;&lt;/a&gt;Graylog running in Hyper-V&lt;/h2&gt;&lt;p&gt;When you go to the Graylog’s &lt;a href=&quot;https://www.graylog.org/download&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;download page&lt;/a&gt; you get a number of options to choose from. But if you are a .NET developer you’ll see a lot of things you have never heard of. Feel free to explore a bit because you never know what you might find interesting. But to proceed with the mission of running Graylog in Hyper-V, &lt;a href=&quot;https://en.wikipedia.org/wiki/Open_Virtualization_Format&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;strong&gt;OVA&lt;/strong&gt;&lt;/a&gt; is what you want.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;OVA&lt;/strong&gt; is an open standard for distributing virtual appliances. When you click the link on Graylog’s download page, you’ll see more details on how to use it inside &lt;a href=&quot;https://www.virtualbox.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;VirtualBox&lt;/a&gt;. You will also need to download VirtualBox in order to create a .VHD disk image that you will use in Hyper-V.&lt;/p&gt;
+&lt;p&gt;Quick google search showed me how to get from .OVA to .VHD. You should rename the .OVA extension to .TAR and extract the archive in a folder (e.g. C:\vm).&lt;/p&gt;
+&lt;p&gt;After that just run the following command to get the .VHD disk image.&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;C:\Program Files\Oracle\VirtualBox&amp;gt;VBoxManage.exe clonehd --format vhd C:\vm\graylog-disk1.vmdk C:\vm\graylog.vhd&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;As a final step all you need to do is create a new Virtual Machine in Hyper-V, and attach the .VHD file. Make sure your VM has enough RAM (4GB is recommended).&lt;/p&gt;
+&lt;h2 id=&quot;Conclusion&quot;&gt;&lt;a href=&quot;#Conclusion&quot; class=&quot;headerlink&quot; title=&quot;Conclusion&quot;&gt;&lt;/a&gt;Conclusion&lt;/h2&gt;&lt;p&gt;To recap:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Download &lt;a href=&quot;http://docs.graylog.org/en/2.0/pages/installation/virtual_machine_appliances.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Graylog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Download &lt;a href=&quot;https://www.virtualbox.org/wiki/Downloads&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;VirtualBox&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Rename extension .OVA to .TAR and extract to &lt;em&gt;C:\vm&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Run &lt;em&gt;C:\Program Files\Oracle\VirtualBox&amp;gt;VBoxManage.exe clonehd –format vhd C:\vm\graylog-disk1.vmdk C:\vm\graylog.vhd&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Create a VM with 4GB of RAM in Hyper-V and attach .VHD that you created&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/how-to-run-graylog-on-ubuntu-server-in-hyper-v/how-to-run-graylog-on-ubuntu-server-in-hyper-v.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;I wanted to set up Graylog log management tool on an Ubuntu Server running in Hyper-V. It has been a while since the last time I did this, and couple of things have changed…&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="graylog" scheme="https://developerschallenges.com/tags/graylog/"/>
+    
+      <category term="ubuntu" scheme="https://developerschallenges.com/tags/ubuntu/"/>
+    
+      <category term="hyper-v" scheme="https://developerschallenges.com/tags/hyper-v/"/>
+    
+      <category term="logging" scheme="https://developerschallenges.com/tags/logging/"/>
+    
+      <category term="virtualbox" scheme="https://developerschallenges.com/tags/virtualbox/"/>
+    
+  </entry>
+  
+</feed>
