@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://developerschallenges.com/"/>
-  <updated>2016-10-09T21:20:37.649Z</updated>
+  <updated>2016-10-28T15:20:06.000Z</updated>
   <id>https://developerschallenges.com/</id>
   
   <author>
@@ -16,25 +16,65 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Simple Angular with TypeScript setup in Visual Studio</title>
+    <link href="https://developerschallenges.com/2016/10/28/simple-angular-with-typescript-setup-in-visual-studio/"/>
+    <id>https://developerschallenges.com/2016/10/28/simple-angular-with-typescript-setup-in-visual-studio/</id>
+    <published>2016-10-27T22:00:00.000Z</published>
+    <updated>2016-10-28T15:20:06.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;/css/images/thumb-default.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Web development is getting more complex by the day and all the tooling and frameworks introduce more and more overhead whenever I want to quickly prototype something. No more!&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h2&gt;&lt;p&gt;Writing web apps or just AngularJS modules today requires just too many steps before I actually get to write any code. Sometimes I just want to create a quick prototype or a module outside of the main application. But having to go through the entire project setup phase is just exhausting and demotivational.&lt;/p&gt;
+&lt;p&gt;So I decided to focus just on the application code, and kinda patch quickly all the other parts. This can be done through some scaffolding tools like &lt;a href=&quot;http://yeoman.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Yeoman&lt;/a&gt; if you have time to discover everything, but since I use Visual Studio, I should really be taking advantage of that.&lt;/p&gt;
+&lt;h2 id=&quot;Setting-up-the-infrastructure&quot;&gt;&lt;a href=&quot;#Setting-up-the-infrastructure&quot; class=&quot;headerlink&quot; title=&quot;Setting up the infrastructure&quot;&gt;&lt;/a&gt;Setting up the infrastructure&lt;/h2&gt;&lt;p&gt;So lets focus on the goal here. I want my prototype app or module to be decoupled from all the frameworks, infrastructure and other parts of a potentially larger application. That means NO Bower, Nuget, NPM, Webpack, Gulp, Grunt, MSBuild, whatever… We need to go &lt;em&gt;old school&lt;/em&gt;!&lt;/p&gt;
+&lt;p&gt;Just like when you use &lt;a href=&quot;https://plnkr.co/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Plunker&lt;/a&gt;, &lt;a href=&quot;https://jsfiddle.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;JSFiddle&lt;/a&gt; or something else, you would just include external libraries from a CDN. If there is no CDN available, just drag-and-drop the file into your scripts folder, and then include it in your index.html file. As for typings &lt;em&gt;.d.ts&lt;/em&gt; files, just download those into a separate folder.&lt;/p&gt;
+&lt;h2 id=&quot;AngularJS-with-TypeScript&quot;&gt;&lt;a href=&quot;#AngularJS-with-TypeScript&quot; class=&quot;headerlink&quot; title=&quot;AngularJS with TypeScript&quot;&gt;&lt;/a&gt;AngularJS with TypeScript&lt;/h2&gt;&lt;p&gt;I want my .ts files and a generated .js file I can include in index.html file. Available for about a &lt;a href=&quot;https://blogs.msdn.microsoft.com/typescript/2015/07/20/announcing-typescript-1-5/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;year&lt;/a&gt; is &lt;em&gt;&lt;a href=&quot;https://www.typescriptlang.org/docs/handbook/tsconfig-json.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;tsconfig.json&lt;/a&gt;&lt;/em&gt; which works great with the editor. This configuration file just tells your editor how to work with the typescript files, for which you would have to use a task runner before. One thing less in my quick setup.&lt;/p&gt;
+&lt;p&gt;This, together with Visual Studio, is the infrastructure I need to go from TypeScript to JavaScript.&lt;/p&gt;
+&lt;h2 id=&quot;Simple-AngularJS-setup&quot;&gt;&lt;a href=&quot;#Simple-AngularJS-setup&quot; class=&quot;headerlink&quot; title=&quot;Simple AngularJS setup&quot;&gt;&lt;/a&gt;Simple AngularJS setup&lt;/h2&gt;&lt;p&gt;I created a simple &lt;a href=&quot;https://github.com/dalibormesaric/simple-angular-with-typescript-setup-in-visual-studio&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;project&lt;/a&gt; as a starting point for an app or module. This includes Bootstrap and AngularJS libraries, typings, and a simple module with a controller and a service. There is also a configured tsconfig.json file that compiles all TypeScript files.&lt;/p&gt;
+&lt;h2 id=&quot;Conclusion&quot;&gt;&lt;a href=&quot;#Conclusion&quot; class=&quot;headerlink&quot; title=&quot;Conclusion&quot;&gt;&lt;/a&gt;Conclusion&lt;/h2&gt;&lt;p&gt;Now that the base is defined, I could easily build number of modules and couple them in a larger application. If there is a module I need, like a Bootstrap datepicker - I would just include that library from CDN or copy the code from GitHub.&lt;/p&gt;
+&lt;p&gt;This way I have a quick demo and a well organized prototype.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/css/images/thumb-default.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Web development is getting more complex by the day and all the tooling and frameworks introduce more and more overhead whenever I want to quickly prototype something. No more!&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="angularjs" scheme="https://developerschallenges.com/tags/angularjs/"/>
+    
+      <category term="typescript" scheme="https://developerschallenges.com/tags/typescript/"/>
+    
+      <category term="visual studio" scheme="https://developerschallenges.com/tags/visual-studio/"/>
+    
+      <category term="tooling" scheme="https://developerschallenges.com/tags/tooling/"/>
+    
+      <category term="setup" scheme="https://developerschallenges.com/tags/setup/"/>
+    
+  </entry>
+  
+  <entry>
     <title>UX Rant - September 2016 Edition</title>
-    <link href="https://developerschallenges.com/2016/09/25/ux-rant---september-2016-edition/"/>
-    <id>https://developerschallenges.com/2016/09/25/ux-rant---september-2016-edition/</id>
-    <published>2016-09-25T07:37:42.000Z</published>
-    <updated>2016-10-09T21:20:37.649Z</updated>
+    <link href="https://developerschallenges.com/2016/09/25/ux-rant-september-2016-edition/"/>
+    <id>https://developerschallenges.com/2016/09/25/ux-rant-september-2016-edition/</id>
+    <published>2016-09-24T22:00:00.000Z</published>
+    <updated>2016-10-21T15:16:56.479Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;/css/images/thumb-default.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;It looks like our proffession can’t agree on what the experiance on the web should be. Constant re-innovation just confuses me, so this is my rant.&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;Google’s-Olympics-Widget&quot;&gt;&lt;a href=&quot;#Google’s-Olympics-Widget&quot; class=&quot;headerlink&quot; title=&quot;Google’s Olympics Widget&quot;&gt;&lt;/a&gt;Google’s Olympics Widget&lt;/h2&gt;&lt;p&gt;Last month there were the olympics, and Google made a nice widget in their search so it was easy so look up athletes and medals per country. During this period sometimes athletes make unexpected results and that was the case for some from my country. I used to do a google search for “Croatia olympics” to see the latest results. I wanted to look up some of the athletes from the widget in google search and learn more about them. How I usually do this, is select a text, right click and select search with google.&lt;/p&gt;
 &lt;p&gt;But it this case the whole thing was a button, even though it was also a text. It was imposible to select a text and to a right click or even copy the text to clipboard.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/ux-rant---september-2016-edition/google-olympics22.gif&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/2016-09-25-ux-rant---september-2016-edition/google-olympics.gif&quot;&gt;&lt;/p&gt;
 &lt;p&gt;When it comes to web elements that should act on mouse click, the main ones are the button and the anchor element. Not the whole area behind the text with the text included. Especialy not with the right click. I hate when I lose my context and then have to go back to where I was just because of someone reinventing the button.&lt;/p&gt;
 &lt;h2 id=&quot;Twitter-Search&quot;&gt;&lt;a href=&quot;#Twitter-Search&quot; class=&quot;headerlink&quot; title=&quot;Twitter Search&quot;&gt;&lt;/a&gt;Twitter Search&lt;/h2&gt;&lt;p&gt;This was on my rant todo list for a while. It’s about moving content after something is loaded on your page. I use twitter as an example, but there are so many cases of this terribe UX.&lt;/p&gt;
 &lt;p&gt;When I search for someone and I know their name will show up first, I type first letters with my left hand, and use my right hand to point the mouse to the first place where I expect the result. Except the result position changes if I’m not fast enough, and I click on a random thing that shows up there even though I never asked for it.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/ux-rant---september-2016-edition/twitter22.gif&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/2016-09-25-ux-rant---september-2016-edition/twitter.gif&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Keep your “smart suggestions” content elsewhere it you really need to show it. And stop moving content around. This is much more annoying when an ad shows up where I wanted to click on a link, and I end up clicking on the ad instead.&lt;/p&gt;
 &lt;h2 id=&quot;Google-Chrome-Backspace-Removal&quot;&gt;&lt;a href=&quot;#Google-Chrome-Backspace-Removal&quot; class=&quot;headerlink&quot; title=&quot;Google Chrome Backspace Removal&quot;&gt;&lt;/a&gt;Google Chrome Backspace Removal&lt;/h2&gt;&lt;p&gt;Web browsers should keep a promise of supporting the web that is, was and will be created. That goes with all surrounding experience in the browser. Navigation is very important, and the web is designed that you can navigate to new sites, but you always have to be able to go back.&lt;/p&gt;
 &lt;p&gt;I’m used to going back using backspace, and Chrome team invented new way of going back. Right Alt + Left Arrow. Try pressing that with one hand. Try it and feel the pain on the innovation. You can’t use the right Alt because that would rotate your screen in Windows.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/ux-rant---september-2016-edition/backspace2.gif&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/2016-09-25-ux-rant---september-2016-edition/backspace.gif&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Then they released an extension that fixes this, arguing that this is how it should be handeled - throuhg an extension. Even though they removed the Chromecast extension and built it in the browser. These teams need to hang out together somethimes.&lt;/p&gt;
 &lt;p&gt;But this just goes well with the fact that google search hijacks your keyboard input and pressing backspace would delete the last letter even though the search box is not in focus. This is for every browser, even the ones where you would expect to go back by pressing backspace.&lt;/p&gt;
 &lt;p&gt;Some links on this &lt;em&gt;feature&lt;/em&gt;:&lt;/p&gt;
@@ -78,10 +118,10 @@
     <title>How to run Graylog on Ubuntu Server in Hyper-V</title>
     <link href="https://developerschallenges.com/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/"/>
     <id>https://developerschallenges.com/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/</id>
-    <published>2016-06-01T16:47:00.000Z</published>
-    <updated>2016-10-07T18:08:56.310Z</updated>
+    <published>2016-05-31T22:00:00.000Z</published>
+    <updated>2016-10-21T15:16:44.471Z</updated>
     
-    <content type="html">&lt;p&gt;&lt;img src=&quot;/images/how-to-run-graylog-on-ubuntu-server-in-hyper-v/how-to-run-graylog-on-ubuntu-server-in-hyper-v.png&quot;&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;img src=&quot;/images/posts/2016-06-01-how-to-run-graylog-on-ubuntu-server-in-hyper-v/2016-06-01-how-to-run-graylog-on-ubuntu-server-in-hyper-v.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;I wanted to set up Graylog log management tool on an Ubuntu Server running in Hyper-V. It has been a while since the last time I did this, and couple of things have changed…&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.graylog.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Graylog&lt;/a&gt; is a log management tool that I first discovered a couple of years ago. I appreciate logging and monitoring while developing software for both capturing errors and seeing if anyone is actually using/testing the features you implemented. Having a centralized log management tool is very convenient to have an entire team aware of what is going on in software projects. Graylog is easy to set up and it has a nice dashboard with a powerful way of querying logs.&lt;/p&gt;
 &lt;p&gt;When I first set up Graylog it was called Graylog2 and it was still in pre-release phase. I knew I want to run an Ubuntu Server instance in an Azure VM. Since I’m a windows developer, setting up all the dependencies through bash is not something I enjoy, but luckily I found a cool script by &lt;a href=&quot;https://twitter.com/mrlesmithjr&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;@mrlesmithjr&lt;/a&gt; on his &lt;a href=&quot;http://everythingshouldbevirtual.com/ubuntu-12-04-graylog2-installation&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;blog&lt;/a&gt;. The process was pretty straightforward, and in couple of minutes I had Graylog2 running in an Azure VM. After that, all I had to was open the correct port and add GELF log4net provider to my project, and logs started streaming in.&lt;/p&gt;
@@ -104,7 +144,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;/images/how-to-run-graylog-on-ubuntu-server-in-hyper-v/how-to-run-graylog-on-ubuntu-server-in-hyper-v.png&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;/images/posts/2016-06-01-how-to-run-graylog-on-ubuntu-server-in-hyper-v/2016-06-01-how-to-run-graylog-on-ubuntu-server-in-hyper-v.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;I wanted to set up Graylog log management tool on an Ubuntu Server running in Hyper-V. It has been a while since the last time I did this, and couple of things have changed…&lt;br&gt;
     
     </summary>

@@ -11,12 +11,12 @@
 <meta property="og:url" content="https://developerschallenges.com/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/index.html">
 <meta property="og:site_name" content="Developer's Challenges">
 <meta property="og:description" content="I wanted to set up Graylog log management tool on an Ubuntu Server running in Hyper-V. It has been a while since the last time I did this, and couple of things have changed…">
-<meta property="og:image" content="https://developerschallenges.com/images/how-to-run-graylog-on-ubuntu-server-in-hyper-v/how-to-run-graylog-on-ubuntu-server-in-hyper-v.png">
-<meta property="og:updated_time" content="2016-10-07T18:08:56.310Z">
+<meta property="og:image" content="https://developerschallenges.com/images/posts/2016-06-01-how-to-run-graylog-on-ubuntu-server-in-hyper-v/2016-06-01-how-to-run-graylog-on-ubuntu-server-in-hyper-v.png">
+<meta property="og:updated_time" content="2016-10-21T15:16:44.471Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to run Graylog on Ubuntu Server in Hyper-V">
 <meta name="twitter:description" content="I wanted to set up Graylog log management tool on an Ubuntu Server running in Hyper-V. It has been a while since the last time I did this, and couple of things have changed…">
-<meta name="twitter:image" content="https://developerschallenges.com/images/how-to-run-graylog-on-ubuntu-server-in-hyper-v/how-to-run-graylog-on-ubuntu-server-in-hyper-v.png">
+<meta name="twitter:image" content="https://developerschallenges.com/images/posts/2016-06-01-how-to-run-graylog-on-ubuntu-server-in-hyper-v/2016-06-01-how-to-run-graylog-on-ubuntu-server-in-hyper-v.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -34,9 +34,14 @@
 	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 	<link rel="manifest" href="/manifest.json">
-	<meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileColor" content="#3b8dbd"/>
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-	<meta name="theme-color" content="#ffffff">
+  <meta name="application-name" content="How to run Graylog on Ubuntu Server in Hyper-V | Developer&#39;s Challenges"/>
+  <meta name="msapplication-square70x70logo" content="/ms-icon-70x70.png"/>
+  <meta name="msapplication-square150x150logo" content="/ms-icon-150x150.png"/>
+  <meta name="msapplication-square310x310logo" content="/ms-icon-310x310.png"/>
+  <meta name="msapplication-notification" content="frequency=30;polling-uri=http://notifications.buildmypinnedsite.com/?feed=https://developerschallenges.com/atom.xml&amp;id=1;polling-uri2=http://notifications.buildmypinnedsite.com/?feed=https://developerschallenges.com/atom.xml&amp;id=2;polling-uri3=http://notifications.buildmypinnedsite.com/?feed=https://developerschallenges.com/atom.xml&amp;id=3;polling-uri4=http://notifications.buildmypinnedsite.com/?feed=https://developerschallenges.com/atom.xml&amp;id=4;polling-uri5=http://notifications.buildmypinnedsite.com/?feed=https://developerschallenges.com/atom.xml&amp;id=5; cycle=1"/>
+	<meta name="theme-color" content="#3b8dbd">
   
 
   <link rel="stylesheet" href="/css/style.css">
@@ -108,7 +113,7 @@ ga('send', 'pageview');
           <section id="main">
             <div class="main-body-content">
               
-  <article id="post-how-to-run-graylog-on-ubuntu-server-in-hyper-v" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <article id="post-2016-06-01-how-to-run-graylog-on-ubuntu-server-in-hyper-v" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
       <!--  -->
       
@@ -125,12 +130,12 @@ ga('send', 'pageview');
 	  
       <p class="article-byline">
         <a href="/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/" class="article-date">
-  <time datetime="2016-06-01T16:47:00.000Z" itemprop="datePublished">2016-06-01</time>
+  <time datetime="2016-05-31T22:00:00.000Z" itemprop="datePublished">2016-06-01</time>
 </a>
       </p>
 	  
       <div class="article-entry" itemprop="articleBody">
-        <p><img src="/images/how-to-run-graylog-on-ubuntu-server-in-hyper-v/how-to-run-graylog-on-ubuntu-server-in-hyper-v.png"></p>
+        <p><img src="/images/posts/2016-06-01-how-to-run-graylog-on-ubuntu-server-in-hyper-v/2016-06-01-how-to-run-graylog-on-ubuntu-server-in-hyper-v.png"></p>
 <p>I wanted to set up Graylog log management tool on an Ubuntu Server running in Hyper-V. It has been a while since the last time I did this, and couple of things have changed…<br><a id="more"></a></p>
 <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p><a href="https://www.graylog.org/" target="_blank" rel="external">Graylog</a> is a log management tool that I first discovered a couple of years ago. I appreciate logging and monitoring while developing software for both capturing errors and seeing if anyone is actually using/testing the features you implemented. Having a centralized log management tool is very convenient to have an entire team aware of what is going on in software projects. Graylog is easy to set up and it has a nice dashboard with a powerful way of querying logs.</p>
 <p>When I first set up Graylog it was called Graylog2 and it was still in pre-release phase. I knew I want to run an Ubuntu Server instance in an Azure VM. Since I’m a windows developer, setting up all the dependencies through bash is not something I enjoy, but luckily I found a cool script by <a href="https://twitter.com/mrlesmithjr" target="_blank" rel="external">@mrlesmithjr</a> on his <a href="http://everythingshouldbevirtual.com/ubuntu-12-04-graylog2-installation" target="_blank" rel="external">blog</a>. The process was pretty straightforward, and in couple of minutes I had Graylog2 running in an Azure VM. After that, all I had to was open the correct port and add GELF log4net provider to my project, and logs started streaming in.</p>
@@ -152,7 +157,7 @@ ga('send', 'pageview');
 
       </div>
       <footer class="article-footer">
-        <a data-url="https://developerschallenges.com/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/" data-id="ciu03b2g90004pkm3skex74fu" class="article-share-link">Share</a>
+        <a data-url="https://developerschallenges.com/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/" data-id="ciutxdxx30008egm3ptotym5u" class="article-share-link">Share</a>
         
           <a href="https://developerschallenges.com/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/#comments" class="article-comment-link">Comments</a>
         
@@ -193,7 +198,7 @@ ga('send', 'pageview');
     
 <nav id="article-nav">
   
-    <a href="/2016/09/25/ux-rant---september-2016-edition/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/09/25/ux-rant-september-2016-edition/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">newer</strong>
       <p class="article-nav-title">
         
@@ -217,7 +222,24 @@ ga('send', 'pageview');
         
           <li>
             <div class="item-thumbnail">
-              <a href="/2016/09/25/ux-rant---september-2016-edition/" class="thumbnail">
+              <a href="/2016/10/28/simple-angular-with-typescript-setup-in-visual-studio/" class="thumbnail">
+  
+    <span style="background-image:url(/css/images/thumb-default.png
+)" alt="Simple Angular with TypeScript setup in Visual Studio" class="thumbnail-image"></span>
+  
+
+</a>
+            </div>
+            <div class="item-inner">
+              <p class="item-category"></p>
+              <p class="item-title"><a href="/2016/10/28/simple-angular-with-typescript-setup-in-visual-studio/" class="title">Simple Angular with TypeScript setup in Visual Studio</a></p>
+              <p class="item-date"><time datetime="2016-10-27T22:00:00.000Z" itemprop="datePublished">2016-10-28</time></p>
+            </div>
+          </li>
+        
+          <li>
+            <div class="item-thumbnail">
+              <a href="/2016/09/25/ux-rant-september-2016-edition/" class="thumbnail">
   
     <span style="background-image:url(/css/images/thumb-default.png
 )" alt="UX Rant - September 2016 Edition" class="thumbnail-image"></span>
@@ -227,8 +249,8 @@ ga('send', 'pageview');
             </div>
             <div class="item-inner">
               <p class="item-category"></p>
-              <p class="item-title"><a href="/2016/09/25/ux-rant---september-2016-edition/" class="title">UX Rant - September 2016 Edition</a></p>
-              <p class="item-date"><time datetime="2016-09-25T07:37:42.000Z" itemprop="datePublished">2016-09-25</time></p>
+              <p class="item-title"><a href="/2016/09/25/ux-rant-september-2016-edition/" class="title">UX Rant - September 2016 Edition</a></p>
+              <p class="item-date"><time datetime="2016-09-24T22:00:00.000Z" itemprop="datePublished">2016-09-25</time></p>
             </div>
           </li>
         
@@ -236,7 +258,7 @@ ga('send', 'pageview');
             <div class="item-thumbnail">
               <a href="/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/" class="thumbnail">
   
-    <span style="background-image:url(/images/how-to-run-graylog-on-ubuntu-server-in-hyper-v/how-to-run-graylog-on-ubuntu-server-in-hyper-v.png
+    <span style="background-image:url(/images/posts/2016-06-01-how-to-run-graylog-on-ubuntu-server-in-hyper-v/2016-06-01-how-to-run-graylog-on-ubuntu-server-in-hyper-v.png
 )" alt="How to run Graylog on Ubuntu Server in Hyper-V" class="thumbnail-image"></span>
   
 
@@ -245,7 +267,7 @@ ga('send', 'pageview');
             <div class="item-inner">
               <p class="item-category"></p>
               <p class="item-title"><a href="/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/" class="title">How to run Graylog on Ubuntu Server in Hyper-V</a></p>
-              <p class="item-date"><time datetime="2016-06-01T16:47:00.000Z" itemprop="datePublished">2016-06-01</time></p>
+              <p class="item-date"><time datetime="2016-05-31T22:00:00.000Z" itemprop="datePublished">2016-06-01</time></p>
             </div>
           </li>
         
