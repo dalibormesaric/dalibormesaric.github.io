@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://developerschallenges.com/"/>
-  <updated>2016-10-28T15:20:06.000Z</updated>
+  <updated>2016-10-29T16:07:39.159Z</updated>
   <id>https://developerschallenges.com/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="https://developerschallenges.com/2016/10/28/simple-angular-with-typescript-setup-in-visual-studio/"/>
     <id>https://developerschallenges.com/2016/10/28/simple-angular-with-typescript-setup-in-visual-studio/</id>
     <published>2016-10-27T22:00:00.000Z</published>
-    <updated>2016-10-28T15:20:06.000Z</updated>
+    <updated>2016-10-29T16:07:39.159Z</updated>
     
-    <content type="html">&lt;p&gt;&lt;img src=&quot;/css/images/thumb-default.png&quot;&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;img src=&quot;/images/posts/2016-10-28-simple-angular-with-typescript-setup-in-visual-studio/2016-10-28-simple-angular-with-typescript-setup-in-visual-studio.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Web development is getting more complex by the day and all the tooling and frameworks introduce more and more overhead whenever I want to quickly prototype something. No more!&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h2&gt;&lt;p&gt;Writing web apps or just AngularJS modules today requires just too many steps before I actually get to write any code. Sometimes I just want to create a quick prototype or a module outside of the main application. But having to go through the entire project setup phase is just exhausting and demotivational.&lt;/p&gt;
 &lt;p&gt;So I decided to focus just on the application code, and kinda patch quickly all the other parts. This can be done through some scaffolding tools like &lt;a href=&quot;http://yeoman.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Yeoman&lt;/a&gt; if you have time to discover everything, but since I use Visual Studio, I should really be taking advantage of that.&lt;/p&gt;
@@ -37,7 +37,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;/css/images/thumb-default.png&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;/images/posts/2016-10-28-simple-angular-with-typescript-setup-in-visual-studio/2016-10-28-simple-angular-with-typescript-setup-in-visual-studio.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Web development is getting more complex by the day and all the tooling and frameworks introduce more and more overhead whenever I want to quickly prototype something. No more!&lt;br&gt;
     
     </summary>
@@ -60,9 +60,9 @@
     <link href="https://developerschallenges.com/2016/09/25/ux-rant-september-2016-edition/"/>
     <id>https://developerschallenges.com/2016/09/25/ux-rant-september-2016-edition/</id>
     <published>2016-09-24T22:00:00.000Z</published>
-    <updated>2016-10-21T15:16:56.479Z</updated>
+    <updated>2016-10-29T16:14:26.757Z</updated>
     
-    <content type="html">&lt;p&gt;&lt;img src=&quot;/css/images/thumb-default.png&quot;&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;img src=&quot;/images/posts/2016-09-25-ux-rant---september-2016-edition/2016-09-25-ux-rant---september-2016-edition.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;It looks like our proffession can’t agree on what the experiance on the web should be. Constant re-innovation just confuses me, so this is my rant.&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;Google’s-Olympics-Widget&quot;&gt;&lt;a href=&quot;#Google’s-Olympics-Widget&quot; class=&quot;headerlink&quot; title=&quot;Google’s Olympics Widget&quot;&gt;&lt;/a&gt;Google’s Olympics Widget&lt;/h2&gt;&lt;p&gt;Last month there were the olympics, and Google made a nice widget in their search so it was easy so look up athletes and medals per country. During this period sometimes athletes make unexpected results and that was the case for some from my country. I used to do a google search for “Croatia olympics” to see the latest results. I wanted to look up some of the athletes from the widget in google search and learn more about them. How I usually do this, is select a text, right click and select search with google.&lt;/p&gt;
 &lt;p&gt;But it this case the whole thing was a button, even though it was also a text. It was imposible to select a text and to a right click or even copy the text to clipboard.&lt;/p&gt;
@@ -90,7 +90,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;/css/images/thumb-default.png&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;/images/posts/2016-09-25-ux-rant---september-2016-edition/2016-09-25-ux-rant---september-2016-edition.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;It looks like our proffession can’t agree on what the experiance on the web should be. Constant re-innovation just confuses me, so this is my rant.&lt;br&gt;
     
     </summary>
