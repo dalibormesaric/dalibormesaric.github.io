@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://developerschallenges.com/"/>
-  <updated>2016-10-29T16:07:39.159Z</updated>
+  <updated>2016-12-11T22:19:20.045Z</updated>
   <id>https://developerschallenges.com/</id>
   
   <author>
@@ -16,11 +16,48 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Episerver Certification</title>
+    <link href="https://developerschallenges.com/2016/12/11/episerver-certification/"/>
+    <id>https://developerschallenges.com/2016/12/11/episerver-certification/</id>
+    <published>2016-12-10T23:00:00.000Z</published>
+    <updated>2016-12-11T22:19:20.045Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;/images/posts/2016-12-11-episerver-certification/2016-12-11-episerver-certification.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;As of this week I am an Episerver Certified Developer!&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I took the certification for Episerver CMS version 9, even though version 10 is the latest. I guess they have not updated the tests yet.&lt;/p&gt;
+&lt;p&gt;This was not something I planned, but since it is a tool that I am and will be using professionally on occasion, it was a good opportunity to test my knowledge. The invitiation for the certification came from the management only a couple of days before the actual exam, so I had limited time to prepare and my experience with Episerver is not that great. However, I’m familiar with building applications using ASP.NET, and it is the same framework Episerver is built on - so that helped.&lt;/p&gt;
+&lt;p&gt;Also, I have a lot of experience with building web applications using CMS systems. My first employer is the creator of a CMS called &lt;a href=&quot;http://monox.mono-software.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MonoX&lt;/a&gt;, and it shares some similarites with how Episerver works.&lt;/p&gt;
+&lt;p&gt;Here are some tips that helped me:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;go through the &lt;a href=&quot;http://world.episerver.com/documentation/cms/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; - I made my iPhone &lt;a href=&quot;https://9to5mac.com/2014/10/04/ios-8-how-to-have-your-ios-device-read-text-for-you/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;read that for me&lt;/a&gt; during my commute&lt;/li&gt;
+&lt;li&gt;download the official &lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=EPiServer.EpiserverCMSVisualStudioExtension&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Visual Studio extension&lt;/a&gt; - also try creating a solution using one of the templates&lt;/li&gt;
+&lt;li&gt;take a look at this &lt;a href=&quot;https://www.youtube.com/channel/UCkGn2z3N6kPNi459OLVoF6Q&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;YouTube channel&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I look forward to building more web applications using Episerver!&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/posts/2016-12-11-episerver-certification/2016-12-11-episerver-certification.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;As of this week I am an Episerver Certified Developer!&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="episerver" scheme="https://developerschallenges.com/tags/episerver/"/>
+    
+      <category term="certification" scheme="https://developerschallenges.com/tags/certification/"/>
+    
+      <category term="tips" scheme="https://developerschallenges.com/tags/tips/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Simple Angular with TypeScript setup in Visual Studio</title>
     <link href="https://developerschallenges.com/2016/10/28/simple-angular-with-typescript-setup-in-visual-studio/"/>
     <id>https://developerschallenges.com/2016/10/28/simple-angular-with-typescript-setup-in-visual-studio/</id>
     <published>2016-10-27T22:00:00.000Z</published>
-    <updated>2016-10-29T16:07:39.159Z</updated>
+    <updated>2016-10-29T16:07:39.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;/images/posts/2016-10-28-simple-angular-with-typescript-setup-in-visual-studio/2016-10-28-simple-angular-with-typescript-setup-in-visual-studio.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Web development is getting more complex by the day and all the tooling and frameworks introduce more and more overhead whenever I want to quickly prototype something. No more!&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
@@ -60,7 +97,7 @@
     <link href="https://developerschallenges.com/2016/09/25/ux-rant-september-2016-edition/"/>
     <id>https://developerschallenges.com/2016/09/25/ux-rant-september-2016-edition/</id>
     <published>2016-09-24T22:00:00.000Z</published>
-    <updated>2016-10-29T16:14:26.757Z</updated>
+    <updated>2016-10-29T16:14:26.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;/images/posts/2016-09-25-ux-rant---september-2016-edition/2016-09-25-ux-rant---september-2016-edition.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;It looks like our proffession can’t agree on what the experiance on the web should be. Constant re-innovation just confuses me, so this is my rant.&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
@@ -119,7 +156,7 @@
     <link href="https://developerschallenges.com/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/"/>
     <id>https://developerschallenges.com/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/</id>
     <published>2016-05-31T22:00:00.000Z</published>
-    <updated>2016-10-21T15:16:44.471Z</updated>
+    <updated>2016-10-21T15:16:44.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;/images/posts/2016-06-01-how-to-run-graylog-on-ubuntu-server-in-hyper-v/2016-06-01-how-to-run-graylog-on-ubuntu-server-in-hyper-v.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;I wanted to set up Graylog log management tool on an Ubuntu Server running in Hyper-V. It has been a while since the last time I did this, and couple of things have changed…&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;

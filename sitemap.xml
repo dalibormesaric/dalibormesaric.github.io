@@ -2,30 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://developerschallenges.com/2016/09/25/ux-rant-september-2016-edition/</loc>
+    <loc>https://developerschallenges.com/2016/12/11/episerver-certification/</loc>
     
-    <lastmod>2016-10-29T16:14:26.757Z</lastmod>
+    <lastmod>2016-12-11T22:19:20.045Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://developerschallenges.com/2016/10/28/simple-angular-with-typescript-setup-in-visual-studio/</loc>
+    <loc>https://developerschallenges.com/publishnotifier/index.html</loc>
     
-    <lastmod>2016-10-29T16:07:39.159Z</lastmod>
+    <lastmod>2016-12-11T20:12:21.408Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://developerschallenges.com/about/index.html</loc>
     
-    <lastmod>2016-10-28T16:00:00.000Z</lastmod>
+    <lastmod>2016-12-11T20:10:10.074Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://developerschallenges.com/projects/index.html</loc>
+    
+    <lastmod>2016-11-27T13:25:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://developerschallenges.com/2016/09/25/ux-rant-september-2016-edition/</loc>
+    
+    <lastmod>2016-10-29T16:14:26.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://developerschallenges.com/2016/10/28/simple-angular-with-typescript-setup-in-visual-studio/</loc>
+    
+    <lastmod>2016-10-29T16:07:39.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://developerschallenges.com/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/</loc>
     
-    <lastmod>2016-10-21T15:16:44.471Z</lastmod>
+    <lastmod>2016-10-21T15:16:44.000Z</lastmod>
     
   </url>
   
@@ -51,13 +72,6 @@
   </url>
   
   <url>
-    <loc>https://developerschallenges.com/zagrebgo/index.html</loc>
-    
-    <lastmod>2016-02-21T09:24:51.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://developerschallenges.com/tictactoe/index.html</loc>
     
     <lastmod>2016-02-21T09:24:51.000Z</lastmod>
@@ -65,9 +79,9 @@
   </url>
   
   <url>
-    <loc>https://developerschallenges.com/projects/index.html</loc>
+    <loc>https://developerschallenges.com/zagrebgo/index.html</loc>
     
-    <lastmod>2016-02-21T08:45:26.000Z</lastmod>
+    <lastmod>2016-02-21T09:24:51.000Z</lastmod>
     
   </url>
   
@@ -86,16 +100,16 @@
   </url>
   
   <url>
-    <loc>https://developerschallenges.com/tictactoe/demo/assets/O.js</loc>
+    <loc>https://developerschallenges.com/tictactoe/demo/assets/X.js</loc>
     
-    <lastmod>2013-04-21T15:43:10.000Z</lastmod>
+    <lastmod>2013-04-21T15:43:10.401Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://developerschallenges.com/tictactoe/demo/assets/X.js</loc>
+    <loc>https://developerschallenges.com/tictactoe/demo/assets/O.js</loc>
     
-    <lastmod>2013-04-21T15:43:10.000Z</lastmod>
+    <lastmod>2013-04-21T15:43:10.378Z</lastmod>
     
   </url>
   

@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Simple Angular with TypeScript setup in Visual Studio | Developer&#39;s Challenges</title>
+  <title>Episerver Certification | Developer&#39;s Challenges</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Web development is getting more complex by the day and all the tooling and frameworks introduce more and more overhead whenever I want to quickly prototype something. No more!">
+  <meta name="description" content="As of this week I am an Episerver Certified Developer!">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Simple Angular with TypeScript setup in Visual Studio">
-<meta property="og:url" content="https://developerschallenges.com/2016/10/28/simple-angular-with-typescript-setup-in-visual-studio/index.html">
+<meta property="og:title" content="Episerver Certification">
+<meta property="og:url" content="https://developerschallenges.com/2016/12/11/episerver-certification/index.html">
 <meta property="og:site_name" content="Developer's Challenges">
-<meta property="og:description" content="Web development is getting more complex by the day and all the tooling and frameworks introduce more and more overhead whenever I want to quickly prototype something. No more!">
-<meta property="og:image" content="https://developerschallenges.com/images/posts/2016-10-28-simple-angular-with-typescript-setup-in-visual-studio/2016-10-28-simple-angular-with-typescript-setup-in-visual-studio.png">
-<meta property="og:updated_time" content="2016-10-29T16:07:39.000Z">
+<meta property="og:description" content="As of this week I am an Episerver Certified Developer!">
+<meta property="og:image" content="https://developerschallenges.com/images/posts/2016-12-11-episerver-certification/2016-12-11-episerver-certification.png">
+<meta property="og:updated_time" content="2016-12-11T22:19:20.045Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Simple Angular with TypeScript setup in Visual Studio">
-<meta name="twitter:description" content="Web development is getting more complex by the day and all the tooling and frameworks introduce more and more overhead whenever I want to quickly prototype something. No more!">
-<meta name="twitter:image" content="https://developerschallenges.com/images/posts/2016-10-28-simple-angular-with-typescript-setup-in-visual-studio/2016-10-28-simple-angular-with-typescript-setup-in-visual-studio.png">
+<meta name="twitter:title" content="Episerver Certification">
+<meta name="twitter:description" content="As of this week I am an Episerver Certified Developer!">
+<meta name="twitter:image" content="https://developerschallenges.com/images/posts/2016-12-11-episerver-certification/2016-12-11-episerver-certification.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -36,7 +36,7 @@
 	<link rel="manifest" href="/manifest.json">
   <meta name="msapplication-TileColor" content="#3b8dbd"/>
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-  <meta name="application-name" content="Simple Angular with TypeScript setup in Visual Studio | Developer&#39;s Challenges"/>
+  <meta name="application-name" content="Episerver Certification | Developer&#39;s Challenges"/>
   <meta name="msapplication-square70x70logo" content="/ms-icon-70x70.png"/>
   <meta name="msapplication-square150x150logo" content="/ms-icon-150x150.png"/>
   <meta name="msapplication-square310x310logo" content="/ms-icon-310x310.png"/>
@@ -113,7 +113,7 @@ ga('send', 'pageview');
           <section id="main">
             <div class="main-body-content">
               
-  <article id="post-2016-10-28-simple-angular-with-typescript-setup-in-visual-studio" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <article id="post-2016-12-11-episerver-certification" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
       <!--  -->
       
@@ -121,7 +121,7 @@ ga('send', 'pageview');
           
   
     <h1 class="article-title" itemprop="name">
-      Simple Angular with TypeScript setup in Visual Studio
+      Episerver Certification
     </h1>
   
 
@@ -129,32 +129,33 @@ ga('send', 'pageview');
       
 	  
       <p class="article-byline">
-        <a href="/2016/10/28/simple-angular-with-typescript-setup-in-visual-studio/" class="article-date">
-  <time datetime="2016-10-27T22:00:00.000Z" itemprop="datePublished">2016-10-28</time>
+        <a href="/2016/12/11/episerver-certification/" class="article-date">
+  <time datetime="2016-12-10T23:00:00.000Z" itemprop="datePublished">2016-12-11</time>
 </a>
       </p>
 	  
       <div class="article-entry" itemprop="articleBody">
-        <p><img src="/images/posts/2016-10-28-simple-angular-with-typescript-setup-in-visual-studio/2016-10-28-simple-angular-with-typescript-setup-in-visual-studio.png"></p>
-<p>Web development is getting more complex by the day and all the tooling and frameworks introduce more and more overhead whenever I want to quickly prototype something. No more!<br><a id="more"></a></p>
-<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Writing web apps or just AngularJS modules today requires just too many steps before I actually get to write any code. Sometimes I just want to create a quick prototype or a module outside of the main application. But having to go through the entire project setup phase is just exhausting and demotivational.</p>
-<p>So I decided to focus just on the application code, and kinda patch quickly all the other parts. This can be done through some scaffolding tools like <a href="http://yeoman.io/" target="_blank" rel="external">Yeoman</a> if you have time to discover everything, but since I use Visual Studio, I should really be taking advantage of that.</p>
-<h2 id="Setting-up-the-infrastructure"><a href="#Setting-up-the-infrastructure" class="headerlink" title="Setting up the infrastructure"></a>Setting up the infrastructure</h2><p>So lets focus on the goal here. I want my prototype app or module to be decoupled from all the frameworks, infrastructure and other parts of a potentially larger application. That means NO Bower, Nuget, NPM, Webpack, Gulp, Grunt, MSBuild, whatever… We need to go <em>old school</em>!</p>
-<p>Just like when you use <a href="https://plnkr.co/" target="_blank" rel="external">Plunker</a>, <a href="https://jsfiddle.net/" target="_blank" rel="external">JSFiddle</a> or something else, you would just include external libraries from a CDN. If there is no CDN available, just drag-and-drop the file into your scripts folder, and then include it in your index.html file. As for typings <em>.d.ts</em> files, just download those into a separate folder.</p>
-<h2 id="AngularJS-with-TypeScript"><a href="#AngularJS-with-TypeScript" class="headerlink" title="AngularJS with TypeScript"></a>AngularJS with TypeScript</h2><p>I want my .ts files and a generated .js file I can include in index.html file. Available for about a <a href="https://blogs.msdn.microsoft.com/typescript/2015/07/20/announcing-typescript-1-5/" target="_blank" rel="external">year</a> is <em><a href="https://www.typescriptlang.org/docs/handbook/tsconfig-json.html" target="_blank" rel="external">tsconfig.json</a></em> which works great with the editor. This configuration file just tells your editor how to work with the typescript files, for which you would have to use a task runner before. One thing less in my quick setup.</p>
-<p>This, together with Visual Studio, is the infrastructure I need to go from TypeScript to JavaScript.</p>
-<h2 id="Simple-AngularJS-setup"><a href="#Simple-AngularJS-setup" class="headerlink" title="Simple AngularJS setup"></a>Simple AngularJS setup</h2><p>I created a simple <a href="https://github.com/dalibormesaric/simple-angular-with-typescript-setup-in-visual-studio" target="_blank" rel="external">project</a> as a starting point for an app or module. This includes Bootstrap and AngularJS libraries, typings, and a simple module with a controller and a service. There is also a configured tsconfig.json file that compiles all TypeScript files.</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Now that the base is defined, I could easily build number of modules and couple them in a larger application. If there is a module I need, like a Bootstrap datepicker - I would just include that library from CDN or copy the code from GitHub.</p>
-<p>This way I have a quick demo and a well organized prototype.</p>
+        <p><img src="/images/posts/2016-12-11-episerver-certification/2016-12-11-episerver-certification.png"></p>
+<p>As of this week I am an Episerver Certified Developer!<br><a id="more"></a></p>
+<p>I took the certification for Episerver CMS version 9, even though version 10 is the latest. I guess they have not updated the tests yet.</p>
+<p>This was not something I planned, but since it is a tool that I am and will be using professionally on occasion, it was a good opportunity to test my knowledge. The invitiation for the certification came from the management only a couple of days before the actual exam, so I had limited time to prepare and my experience with Episerver is not that great. However, I’m familiar with building applications using ASP.NET, and it is the same framework Episerver is built on - so that helped.</p>
+<p>Also, I have a lot of experience with building web applications using CMS systems. My first employer is the creator of a CMS called <a href="http://monox.mono-software.com/" target="_blank" rel="external">MonoX</a>, and it shares some similarites with how Episerver works.</p>
+<p>Here are some tips that helped me:</p>
+<ul>
+<li>go through the <a href="http://world.episerver.com/documentation/cms/" target="_blank" rel="external">documentation</a> - I made my iPhone <a href="https://9to5mac.com/2014/10/04/ios-8-how-to-have-your-ios-device-read-text-for-you/" target="_blank" rel="external">read that for me</a> during my commute</li>
+<li>download the official <a href="https://marketplace.visualstudio.com/items?itemName=EPiServer.EpiserverCMSVisualStudioExtension" target="_blank" rel="external">Visual Studio extension</a> - also try creating a solution using one of the templates</li>
+<li>take a look at this <a href="https://www.youtube.com/channel/UCkGn2z3N6kPNi459OLVoF6Q" target="_blank" rel="external">YouTube channel</a></li>
+</ul>
+<p>I look forward to building more web applications using Episerver!</p>
 
       </div>
       <footer class="article-footer">
-        <a data-url="https://developerschallenges.com/2016/10/28/simple-angular-with-typescript-setup-in-visual-studio/" data-id="ciwl7sny8000b20srdpqxzong" class="article-share-link">Share</a>
+        <a data-url="https://developerschallenges.com/2016/12/11/episerver-certification/" data-id="ciwl7snya000c20sr6ryf3puk" class="article-share-link">Share</a>
         
-          <a href="https://developerschallenges.com/2016/10/28/simple-angular-with-typescript-setup-in-visual-studio/#comments" class="article-comment-link">Comments</a>
+          <a href="https://developerschallenges.com/2016/12/11/episerver-certification/#comments" class="article-comment-link">Comments</a>
         
         
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularjs/">angularjs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/setup/">setup</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tooling/">tooling</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/typescript/">typescript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/visual-studio/">visual studio</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/certification/">certification</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/episerver/">episerver</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tips/">tips</a></li></ul>
 
       </footer>
     </div>
@@ -190,20 +191,10 @@ ga('send', 'pageview');
     
 <nav id="article-nav">
   
-    <a href="/2016/12/11/episerver-certification/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">newer</strong>
-      <p class="article-nav-title">
-        
-          Episerver Certification
-        
-      </p>
-      <i class="icon" id="icon-chevron-right"></i>
-    </a>
   
-  
-    <a href="/2016/09/25/ux-rant-september-2016-edition/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/10/28/simple-angular-with-typescript-setup-in-visual-studio/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">older</strong>
-      <p class="article-nav-title">UX Rant - September 2016 Edition</p>
+      <p class="article-nav-title">Simple Angular with TypeScript setup in Visual Studio</p>
       <i class="icon" id="icon-chevron-left"></i>
     </a>
   
@@ -344,7 +335,7 @@ ga('send', 'pageview');
 <script>
   var disqus_shortname = 'developerschallenges';
   
-  var disqus_url = 'https://developerschallenges.com/2016/10/28/simple-angular-with-typescript-setup-in-visual-studio/';
+  var disqus_url = 'https://developerschallenges.com/2016/12/11/episerver-certification/';
   
   (function(){
     var dsq = document.createElement('script');
