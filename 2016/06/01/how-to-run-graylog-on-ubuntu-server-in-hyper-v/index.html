@@ -6,13 +6,14 @@
   <title>How to run Graylog on Ubuntu Server in Hyper-V | Developer&#39;s Challenges</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="I wanted to set up Graylog log management tool on an Ubuntu Server running in Hyper-V. It has been a while since the last time I did this, and couple of things have changed…">
+<meta name="keywords" content="graylog,ubuntu,hyper-v,logging,virtualbox">
 <meta property="og:type" content="article">
 <meta property="og:title" content="How to run Graylog on Ubuntu Server in Hyper-V">
 <meta property="og:url" content="https://developerschallenges.com/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/index.html">
 <meta property="og:site_name" content="Developer's Challenges">
 <meta property="og:description" content="I wanted to set up Graylog log management tool on an Ubuntu Server running in Hyper-V. It has been a while since the last time I did this, and couple of things have changed…">
 <meta property="og:image" content="https://developerschallenges.com/images/posts/2016-06-01-how-to-run-graylog-on-ubuntu-server-in-hyper-v/2016-06-01-how-to-run-graylog-on-ubuntu-server-in-hyper-v.png">
-<meta property="og:updated_time" content="2016-10-21T15:16:44.000Z">
+<meta property="og:updated_time" content="2017-04-22T10:35:14.301Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to run Graylog on Ubuntu Server in Hyper-V">
 <meta name="twitter:description" content="I wanted to set up Graylog log management tool on an Ubuntu Server running in Hyper-V. It has been a while since the last time I did this, and couple of things have changed…">
@@ -98,7 +99,7 @@ ga('send', 'pageview');
             </ul>
             <nav id="sub-nav">
               <div id="search-form-wrap">
-                <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="https://developerschallenges.com"></form>
+                <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="https://developerschallenges.com"></form>
               </div>
             </nav>
           </div>
@@ -137,6 +138,7 @@ ga('send', 'pageview');
       <div class="article-entry" itemprop="articleBody">
         <p><img src="/images/posts/2016-06-01-how-to-run-graylog-on-ubuntu-server-in-hyper-v/2016-06-01-how-to-run-graylog-on-ubuntu-server-in-hyper-v.png"></p>
 <p>I wanted to set up Graylog log management tool on an Ubuntu Server running in Hyper-V. It has been a while since the last time I did this, and couple of things have changed…<br><a id="more"></a></p>
+<hr>
 <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p><a href="https://www.graylog.org/" target="_blank" rel="external">Graylog</a> is a log management tool that I first discovered a couple of years ago. I appreciate logging and monitoring while developing software for both capturing errors and seeing if anyone is actually using/testing the features you implemented. Having a centralized log management tool is very convenient to have an entire team aware of what is going on in software projects. Graylog is easy to set up and it has a nice dashboard with a powerful way of querying logs.</p>
 <p>When I first set up Graylog it was called Graylog2 and it was still in pre-release phase. I knew I want to run an Ubuntu Server instance in an Azure VM. Since I’m a windows developer, setting up all the dependencies through bash is not something I enjoy, but luckily I found a cool script by <a href="https://twitter.com/mrlesmithjr" target="_blank" rel="external">@mrlesmithjr</a> on his <a href="http://everythingshouldbevirtual.com/ubuntu-12-04-graylog2-installation" target="_blank" rel="external">blog</a>. The process was pretty straightforward, and in couple of minutes I had Graylog2 running in an Azure VM. After that, all I had to was open the correct port and add GELF log4net provider to my project, and logs started streaming in.</p>
 <p>Two years later, or now, I wanted to do the same thing, but of course the new versions of Graylog and its dependencies came out. So in order to run the latest and greatest I went back to the script I used the first time. Unfortunately, the author stopped the maintenance because he switched to a different way of managing software tools - using <a href="https://www.ansible.com/" target="_blank" rel="external">Ansible</a>. This is not something I am interested investing in at the moment. All I wanted was a Graylog server on my Hyper-V VM. How hard can that be?</p>
@@ -157,7 +159,7 @@ ga('send', 'pageview');
 
       </div>
       <footer class="article-footer">
-        <a data-url="https://developerschallenges.com/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/" data-id="ciwl9ruvj0008ussr8z49dnkt" class="article-share-link">Share</a>
+        <a data-url="https://developerschallenges.com/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/" data-id="cj01ipts80008asm34j91gaql" class="article-share-link">Share</a>
         
           <a href="https://developerschallenges.com/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/#comments" class="article-comment-link">Comments</a>
         
@@ -198,16 +200,12 @@ ga('send', 'pageview');
     
 <nav id="article-nav">
   
-    <a href="/2016/09/25/ux-rant-september-2016-edition/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">newer</strong>
-      <p class="article-nav-title">
-        
-          UX Rant - September 2016 Edition
-        
-      </p>
-      <i class="icon" id="icon-chevron-right"></i>
-    </a>
   
+    <a href="/2016/09/25/ux-rant-september-2016-edition/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">older</strong>
+      <p class="article-nav-title">UX Rant - September 2016 Edition</p>
+      <i class="icon" id="icon-chevron-left"></i>
+    </a>
   
 </nav>
 
@@ -219,6 +217,23 @@ ga('send', 'pageview');
     <h3 class="widget-title">recent articles</h3>
     <div class="widget">
       <ul id="recent-post">
+        
+          <li>
+            <div class="item-thumbnail">
+              <a href="/2017/04/22/episerver-how-to-get-title-in-all-properties-view/" class="thumbnail">
+  
+    <span style="background-image:url(/images/posts/2017-04-22-episerver-how-to-get-title-in-all-properties-view/2017-04-22-episerver-how-to-get-title-in-all-properties-view.png
+)" alt="Episerver: How to get title in All Properties view?" class="thumbnail-image"></span>
+  
+
+</a>
+            </div>
+            <div class="item-inner">
+              <p class="item-category"></p>
+              <p class="item-title"><a href="/2017/04/22/episerver-how-to-get-title-in-all-properties-view/" class="title">Episerver: How to get title in All Properties view?</a></p>
+              <p class="item-date"><time datetime="2017-04-21T22:00:00.000Z" itemprop="datePublished">2017-04-22</time></p>
+            </div>
+          </li>
         
           <li>
             <div class="item-thumbnail">
@@ -336,7 +351,7 @@ ga('send', 'pageview');
         <p class="logo-wrap">
           <a href="/">Developer&#39;s Challenges</a>
         </p>
-        <p>&copy; 2016 Dalibor Mesarić</p>
+        <p>&copy; 2017 Dalibor Mesarić</p>
         <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a></p>
       </div>
     </div>
