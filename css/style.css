@@ -833,7 +833,7 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  background-position: center;
+  background-position: 25%;
 }
 #recent-post li .item-thumbnail .thumbnail .thumbnail-none {
   background-image: url("images/thumb-default-small.png");
@@ -1730,7 +1730,7 @@ i.icon:before {
 #icon-archive:before {
   content: "\f187";
 }
-#icon-twitter:before {
+#icon-Twitter:before {
   content: "\f081";
 }
 #icon-facebook:before {
@@ -1739,13 +1739,13 @@ i.icon:before {
 #icon-google_plus:before {
   content: "\f0d5";
 }
-#icon-github:before {
+#icon-GitHub:before {
   content: "\f092";
 }
 #icon-weibo:before {
   content: "\f18a";
 }
-#icon-rss:before {
+#icon-RSS:before {
   content: "\f09e";
 }
 #icon-caret-right:before {
@@ -1769,10 +1769,10 @@ i.icon:before {
 #icon-calendar-o:before {
   content: "\f133";
 }
-#icon-linkedin:before {
+#icon-LinkedIn:before {
   content: "\f08c";
 }
-#icon-gist:before {
+#icon-Gist:before {
   content: "\f113";
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
