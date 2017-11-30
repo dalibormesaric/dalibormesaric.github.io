@@ -3,18 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: visual studio | Developer&#39;s Challenges</title>
+  <title>Stop looking at ads with Pi-hole | Developer&#39;s Challenges</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Figuring out code and life. Written by Dalibor Mesarić.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Developer&#39;s Challenges">
-<meta property="og:url" content="https://developerschallenges.com/tags/visual-studio/index.html">
+  <meta name="description" content="Quickly set up Pi-hole on Raspberry Pi and get rid of ads on all devices in your home!">
+<meta name="keywords" content="raspberry pi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Stop looking at ads with Pi-hole">
+<meta property="og:url" content="https://developerschallenges.com/2017/11/30/stop-looking-at-ads-with-pi-hole/index.html">
 <meta property="og:site_name" content="Developer&#39;s Challenges">
-<meta property="og:description" content="Figuring out code and life. Written by Dalibor Mesarić.">
+<meta property="og:description" content="Quickly set up Pi-hole on Raspberry Pi and get rid of ads on all devices in your home!">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://developerschallenges.com/images/posts/2017-11-30-stop-looking-at-ads-with-pi-hole/pi-hole.png">
+<meta property="og:image" content="https://developerschallenges.com/images/posts/2017-11-30-stop-looking-at-ads-with-pi-hole/raspberry_pi.jpg">
+<meta property="og:image" content="https://developerschallenges.com/images/posts/2017-11-30-stop-looking-at-ads-with-pi-hole/raspberry_pi_live.jpg">
+<meta property="og:updated_time" content="2017-11-30T21:49:15.835Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Developer&#39;s Challenges">
-<meta name="twitter:description" content="Figuring out code and life. Written by Dalibor Mesarić.">
+<meta name="twitter:title" content="Stop looking at ads with Pi-hole">
+<meta name="twitter:description" content="Quickly set up Pi-hole on Raspberry Pi and get rid of ads on all devices in your home!">
+<meta name="twitter:image" content="https://developerschallenges.com/images/posts/2017-11-30-stop-looking-at-ads-with-pi-hole/pi-hole.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -34,7 +40,7 @@
 	<link rel="manifest" href="/manifest.json">
   <meta name="msapplication-TileColor" content="#3b8dbd"/>
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-  <meta name="application-name" content="Tag: visual studio | Developer&#39;s Challenges"/>
+  <meta name="application-name" content="Stop looking at ads with Pi-hole | Developer&#39;s Challenges"/>
   <meta name="msapplication-square70x70logo" content="/ms-icon-70x70.png"/>
   <meta name="msapplication-square150x150logo" content="/ms-icon-150x150.png"/>
   <meta name="msapplication-square310x310logo" content="/ms-icon-310x310.png"/>
@@ -111,50 +117,66 @@ ga('send', 'pageview');
           <section id="main">
             <div class="main-body-content">
               
-  
-  
-    
-    
+  <article id="post-2017-11-30-stop-looking-at-ads-with-pi-hole" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+      <!--  -->
       
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year"><i class="icon" id="icon-calendar-o"></i>2016</a>
-        </div>
-        <div class="archives">
-    
-      <div class="article-row">
-        
-  <article class="article article-summary">
-    <div class="article-summary-inner">
-      <a href="/2016/10/28/simple-angular-with-typescript-setup-in-visual-studio/" class="thumbnail">
+        <header class="article-header">
+          
   
-    <span style="background-image:url(/images/posts/2016-10-28-simple-angular-with-typescript-setup-in-visual-studio/2016-10-28-simple-angular-with-typescript-setup-in-visual-studio.png
-)" title="Simple Angular with TypeScript setup in Visual Studio" class="thumbnail-image"></span>
+    <h1 class="article-title" itemprop="name">
+      Stop looking at ads with Pi-hole
+    </h1>
   
 
+        </header>
+      
+	  
+      <p class="article-byline">
+        <a href="/2017/11/30/stop-looking-at-ads-with-pi-hole/" class="article-date">
+  <time datetime="2017-11-29T23:00:00.000Z" itemprop="datePublished">2017-11-30</time>
 </a>
-      <div class="article-meta">
-        <p class="category"></p>
-        <p class="date"><time datetime="2016-10-27T22:00:00.000Z" itemprop="datePublished">2016-10-28</time></p>
-      </div>
-      <h2 class="article-title">
-        <a href="/2016/10/28/simple-angular-with-typescript-setup-in-visual-studio/" class="title">Simple Angular with TypeScript setup in Visual Studio</a>
-      </h2>
-      <p class="article-excerpt">
-        
-        
-Web development is getting more complex by the day and all the tooling and frameworks introduce more and more overhead whenever I want to quickly prototype something. No more!
       </p>
+	  
+      <div class="article-entry" itemprop="articleBody">
+        <p><img src="/images/posts/2017-11-30-stop-looking-at-ads-with-pi-hole/pi-hole.png"></p>
+<p>Quickly set up Pi-hole on Raspberry Pi and get rid of ads on all devices in your home!<br><a id="more"></a></p>
+<hr>
+<p>In countries where Black Friday is a thing, I think everyone spent a good part of their day just looking through all the deals. This year I finally bought a Raspberry Pi. Two actually.</p>
+<p><img src="/images/posts/2017-11-30-stop-looking-at-ads-with-pi-hole/raspberry_pi.jpg"></p>
+<p>Few weeks ago I re-discoverd an awesome project that promises to stop all ad traffic in your local network. I normally use <a href="https://github.com/gorhill/uBlock/" target="_blank" rel="external">uBlock Origin</a> for browsers, but that still leaves all the other applications and devices unprotected. Enter <a href="https://pi-hole.net/" target="_blank" rel="external">Pi-hole</a>!</p>
+<p>Since this is a brand new Raspberry Pi and I didn’t want to connect any peripherals to it, I downloaded Raspbian Stretch Lite image from <a href="https://www.raspberrypi.org/downloads/raspbian/" target="_blank" rel="external">the official web site</a>.</p>
+<p>Next step was getting the image on the SD card. I’m using macOS and I followed <a href="https://www.raspberrypi.org/documentation/installation/installing-images/mac.md" target="_blank" rel="external">the official tutorial</a>.</p>
+<p>This was the command I ran after unmounting SD card with the Disk Utility.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo dd bs=1m if=2017-09-07-raspbian-stretch-lite.img of=/dev/rdisk2 conv=sync</div></pre></td></tr></table></figure></p>
+<p>Next, in Terminal I ran the following commands.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">cd /</div><div class="line">cd Volumes/boot</div><div class="line">touch ssh</div><div class="line">touch wpa_supplicant.conf</div><div class="line">nano wpa_supplicant.conf</div></pre></td></tr></table></figure></p>
+<p>Here I used nano to open the file and pasted in the <a href="https://www.raspberrypi.org/forums/viewtopic.php?t=191252" target="_blank" rel="external">following</a>.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">country=US</div><div class="line">ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev</div><div class="line">update_config=1</div><div class="line"></div><div class="line">network=&#123;</div><div class="line">    ssid=&quot;your_real_wifi_ssid&quot;</div><div class="line">    scan_ssid=1</div><div class="line">    psk=&quot;your_real_password&quot;</div><div class="line">    key_mgmt=WPA-PSK</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>After this I ejected the SD card, inserted it in Raspberry Pi and plugged it in!</p>
+<p>Next step was to find the ip address assigned to the Raspberry Pi, and I found the easiest way to see this is on the router.</p>
+<p>Using that ip address I connected to the Raspberry Pi from Terminal. To connect on Windows you can use <a href="http://www.putty.org/" target="_blank" rel="external">Putty</a>.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh pi@IP_ADDRESS</div></pre></td></tr></table></figure></p>
+<p>Default password is <em>raspberry</em></p>
+<p>You can change the default password by typing in<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">passwd</div></pre></td></tr></table></figure></p>
+<p>As the final step, I ran the command from the <a href="https://pi-hole.net/" target="_blank" rel="external">official page</a>. Following the instruction was pretty straightforward and I’m surfing without ads on all devices!</p>
+<p><img src="/images/posts/2017-11-30-stop-looking-at-ads-with-pi-hole/raspberry_pi_live.jpg"></p>
+
+      </div>
+      <footer class="article-footer">
+        <a data-url="https://developerschallenges.com/2017/11/30/stop-looking-at-ads-with-pi-hole/" data-id="cjan0o7qa000ny4srg64718c4" class="article-share-link">Share</a>
+        
+          <a href="https://developerschallenges.com/2017/11/30/stop-looking-at-ads-with-pi-hole/#comments" class="article-comment-link">Comments</a>
+        
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/raspberry-pi/">raspberry pi</a></li></ul>
+
+      </footer>
     </div>
   </article>
-
+  
+    <section id="comments">
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
       </div>
+    </section>
   
-  
-    </div></section>
-  
-
 
             </div>
           </section>
@@ -175,6 +197,19 @@ Web development is getting more complex by the day and all the tooling and frame
       
     </ul>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/11/02/episerver-all-properties-component-for-showing-and-hiding-content-using-a-drop-down/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">newer</strong>
+      <p class="article-nav-title">Episerver: All properties component for showing and hiding content using a drop-down</p>
+      <i class="icon" id="icon-chevron-left"></i>
+    </a>
+  
+  
+</nav>
+
   
   <div class="widgets-container">
     
@@ -324,6 +359,20 @@ Web development is getting more complex by the day and all the tooling and frame
   </div>
 </footer>
     
+<script>
+  var disqus_shortname = 'developerschallenges';
+  
+  var disqus_url = 'https://developerschallenges.com/2017/11/30/stop-looking-at-ads-with-pi-hole/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
 
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
