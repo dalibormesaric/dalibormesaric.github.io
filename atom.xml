@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://developerschallenges.com/"/>
-  <updated>2017-12-30T22:31:28.590Z</updated>
+  <updated>2018-01-22T22:13:25.678Z</updated>
   <id>https://developerschallenges.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Passing Microsoft Exam 70-483</title>
+    <link href="https://developerschallenges.com/2018/01/22/passing-microsoft-exam-70-483/"/>
+    <id>https://developerschallenges.com/2018/01/22/passing-microsoft-exam-70-483/</id>
+    <published>2018-01-21T23:00:00.000Z</published>
+    <updated>2018-01-22T22:13:25.678Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/posts/2018-01-22-passing-microsoft-exam-70-483/hero.png"></p><p>After months of postponing I finally took the “Programming in C#” exam and I managed to pass it!<br><a id="more"></a></p><hr><p>As a personal goal I really wanted to take <a href="https://www.microsoft.com/en-us/learning/exam-70-483.aspx" target="_blank" rel="external">this exam</a>. Even though I’m using C# on a daily basis, I knew there was a big part of the language and the framework still left to explore.</p><p>To prepare for it I watched <a href="https://channel9.msdn.com/Search?term=70-483#ch9Search&amp;lang-en=en&amp;pubDate=all" target="_blank" rel="external">Channel 9 videos</a> from the official trainers to get familiar with what to expect form the exam. I also tested my C# skills with <a href="https://www.pluralsight.com/product/pluralsight-iq" target="_blank" rel="external">Pluralsight IQ</a> and that gave me some confidence as well.</p><p>To be sure I have covered everything from the objectives, I went through the <a href="https://www.microsoftpressstore.com/store/exam-ref-70-483-programming-in-c-sharp-mcsd-9780735676824" target="_blank" rel="external">official certification book</a>. Additional resource was <a href="http://shop.oreilly.com/product/9780596001810.do" target="_blank" rel="external">C# in a Nutshell</a> which covers even more then the certificate requires.</p><p>The exam it self was exactly how it was described in one of those Channel 9 videos, so just follow the advice and you will do just fine.</p><p>Next step towards the MCSA: Web Applications certification is Exam 70-486 - Developing ASP.NET MVC Web Applications. They have just updated it to include ASP.NET Core questions, so it adds even more reasons to prepare for this!</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/posts/2018-01-22-passing-microsoft-exam-70-483/hero.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;After months of postponing I finally took the “Programming in C#” exam and I managed to pass it!&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="certification" scheme="https://developerschallenges.com/tags/certification/"/>
+    
+      <category term="tips" scheme="https://developerschallenges.com/tags/tips/"/>
+    
+      <category term="microsoft" scheme="https://developerschallenges.com/tags/microsoft/"/>
+    
+      <category term="c#" scheme="https://developerschallenges.com/tags/c/"/>
+    
+  </entry>
   
   <entry>
     <title>Episerver: How to set a value on the server side and update the All Properties View?</title>
@@ -125,9 +152,9 @@
     
       <category term="episerver" scheme="https://developerschallenges.com/tags/episerver/"/>
     
-      <category term="tips" scheme="https://developerschallenges.com/tags/tips/"/>
-    
       <category term="certification" scheme="https://developerschallenges.com/tags/certification/"/>
+    
+      <category term="tips" scheme="https://developerschallenges.com/tags/tips/"/>
     
   </entry>
   
