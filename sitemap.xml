@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://developerschallenges.com/2018/02/11/ndc-london-2018-recap/</loc>
+    
+    <lastmod>2018-02-11T22:40:18.986Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://developerschallenges.com/about/index.html</loc>
+    
+    <lastmod>2018-01-23T19:16:32.526Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://developerschallenges.com/2018/01/22/passing-microsoft-exam-70-483/</loc>
     
     <lastmod>2018-01-22T22:13:25.678Z</lastmod>
@@ -11,7 +25,7 @@
   <url>
     <loc>https://developerschallenges.com/2017/12/30/episerver-how-to-set-a-value-on-the-server-side-and-update-the-all-properties-view/</loc>
     
-    <lastmod>2017-12-30T22:31:28.590Z</lastmod>
+    <lastmod>2017-12-30T22:31:28.591Z</lastmod>
     
   </url>
   
@@ -46,21 +60,21 @@
   <url>
     <loc>https://developerschallenges.com/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/</loc>
     
-    <lastmod>2017-04-22T10:35:14.301Z</lastmod>
+    <lastmod>2017-04-22T10:35:14.302Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://developerschallenges.com/2016/10/28/simple-angular-with-typescript-setup-in-visual-studio/</loc>
     
-    <lastmod>2017-04-22T10:34:36.815Z</lastmod>
+    <lastmod>2017-04-22T10:34:36.816Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://developerschallenges.com/2016/12/11/episerver-certification/</loc>
     
-    <lastmod>2017-04-22T10:34:17.709Z</lastmod>
+    <lastmod>2017-04-22T10:34:17.710Z</lastmod>
     
   </url>
   
@@ -75,13 +89,6 @@
     <loc>https://developerschallenges.com/publishnotifier/index.html</loc>
     
     <lastmod>2016-12-11T20:12:21.408Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://developerschallenges.com/about/index.html</loc>
-    
-    <lastmod>2016-12-11T20:10:10.074Z</lastmod>
     
   </url>
   
