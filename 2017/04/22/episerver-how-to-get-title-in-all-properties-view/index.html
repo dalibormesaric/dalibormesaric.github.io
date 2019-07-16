@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <title>Episerver: How to get title in All Properties view? | Developer&#39;s Challenges</title>
@@ -32,18 +32,18 @@
 	<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
 	<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 	<link rel="manifest" href="/manifest.json">
-  <meta name="msapplication-TileColor" content="#3b8dbd"/>
+  <meta name="msapplication-TileColor" content="#3b8dbd">
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-  <meta name="application-name" content="Episerver: How to get title in All Properties view? | Developer&#39;s Challenges"/>
-  <meta name="msapplication-square70x70logo" content="/ms-icon-70x70.png"/>
-  <meta name="msapplication-square150x150logo" content="/ms-icon-150x150.png"/>
-  <meta name="msapplication-square310x310logo" content="/ms-icon-310x310.png"/>
-  <meta name="msapplication-notification" content="frequency=30;polling-uri=http://notifications.buildmypinnedsite.com/?feed=https://developerschallenges.com/atom.xml&amp;id=1;polling-uri2=http://notifications.buildmypinnedsite.com/?feed=https://developerschallenges.com/atom.xml&amp;id=2;polling-uri3=http://notifications.buildmypinnedsite.com/?feed=https://developerschallenges.com/atom.xml&amp;id=3;polling-uri4=http://notifications.buildmypinnedsite.com/?feed=https://developerschallenges.com/atom.xml&amp;id=4;polling-uri5=http://notifications.buildmypinnedsite.com/?feed=https://developerschallenges.com/atom.xml&amp;id=5; cycle=1"/>
+  <meta name="application-name" content="Episerver: How to get title in All Properties view? | Developer&#39;s Challenges">
+  <meta name="msapplication-square70x70logo" content="/ms-icon-70x70.png">
+  <meta name="msapplication-square150x150logo" content="/ms-icon-150x150.png">
+  <meta name="msapplication-square310x310logo" content="/ms-icon-310x310.png">
+  <meta name="msapplication-notification" content="frequency=30;polling-uri=http://notifications.buildmypinnedsite.com/?feed=https://developerschallenges.com/atom.xml&amp;id=1;polling-uri2=http://notifications.buildmypinnedsite.com/?feed=https://developerschallenges.com/atom.xml&amp;id=2;polling-uri3=http://notifications.buildmypinnedsite.com/?feed=https://developerschallenges.com/atom.xml&amp;id=3;polling-uri4=http://notifications.buildmypinnedsite.com/?feed=https://developerschallenges.com/atom.xml&amp;id=4;polling-uri5=http://notifications.buildmypinnedsite.com/?feed=https://developerschallenges.com/atom.xml&amp;id=5; cycle=1">
 	<meta name="theme-color" content="#3b8dbd">
   
 
@@ -69,12 +69,12 @@ ga('send', 'pageview');
   
 
   
-    <link href='//fonts.googleapis.com/css?family=Titillium+Web:300,400,600' rel='stylesheet' type='text/css'>
+    <link href="//fonts.googleapis.com/css?family=Titillium+Web:300,400,600" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
 
 </head>
-
+</html>
 <body>
   <div id="wrap">
     <header id="header">
@@ -145,17 +145,17 @@ ga('send', 'pageview');
 <p><img src="/images/posts/2017-04-22-episerver-how-to-get-title-in-all-properties-view/logotype.png"></p>
 <p>Inspecting the HTML showed that the title is rendered as <code>legend</code> within a <code>fieldset</code>. The string for the title is actually coming from a Language XML File, which makes it extremely loosely coupled and hard to match unless you know what to look for. The block itself is added to the page in a controller and not in the page model.</p>
 <p>There is an alternative to building shareable blocks that are applied using drag and drop to <code>ContentArea</code> property. Each block is decorated with <code>Content</code> attribute which can have <code>AvailableInEditMode</code> property. Setting that property to <code>false</code> will disallow crating this block as a sharable component. But the block is still very much usabe in our pages or other blocks as a property block.</p>
-<p>Following the <a href="http://world.episerver.com/documentation/developer-guides/CMS/getting-started/creating-your-project/" target="_blank" rel="external">Episerver Getting started</a> tutorial you can create a clean Episerver project to try this out.</p>
-<p>Add a new block:<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">[<span class="meta">ContentType(</span></div><div class="line"><span class="meta">    DisplayName = <span class="meta-string">"PetBlock"</span>,</span></div><div class="line"><span class="meta">    GUID = <span class="meta-string">"ebbdbefb-b0e1-40fd-a13e-f408c16ee1fd"</span>,</span></div><div class="line"><span class="meta">    Description = <span class="meta-string">""</span>)</span>]</div><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">PetBlock</span> : <span class="title">BlockData</span></div><div class="line">&#123;</div><div class="line">    [<span class="meta">CultureSpecific</span>]</div><div class="line">    [<span class="meta">Display(</span></div><div class="line"><span class="meta">        Name = <span class="meta-string">"Name"</span>,</span></div><div class="line"><span class="meta">        Description = <span class="meta-string">"Name field's description"</span>,</span></div><div class="line"><span class="meta">        GroupName = SystemTabNames.Content,</span></div><div class="line"><span class="meta">        Order = 1)</span>]</div><div class="line">    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keyword">string</span> Name &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>And add it to your <code>StartPage</code> page model:<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">[<span class="meta">ContentType(</span></div><div class="line"><span class="meta">    DisplayName = <span class="meta-string">"StartPage"</span>,</span></div><div class="line"><span class="meta">    GUID = <span class="meta-string">"8205d905-b467-4d0c-ae2c-391d0640456a"</span>,</span></div><div class="line"><span class="meta">    Description = <span class="meta-string">""</span>)</span>]</div><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">StartPage</span> : <span class="title">PageData</span></div><div class="line">&#123;</div><div class="line">    [<span class="meta">Display(</span></div><div class="line"><span class="meta">        Name = <span class="meta-string">"Pet"</span>,</span></div><div class="line"><span class="meta">        GroupName = SystemTabNames.Content,</span></div><div class="line"><span class="meta">        Order = 5)</span>]</div><div class="line">    <span class="keyword">public</span> <span class="keyword">virtual</span> PetBlock PetBlock &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>Following the <a href="http://world.episerver.com/documentation/developer-guides/CMS/getting-started/creating-your-project/" target="_blank" rel="noopener">Episerver Getting started</a> tutorial you can create a clean Episerver project to try this out.</p>
+<p>Add a new block:<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[<span class="meta">ContentType(</span></span><br><span class="line"><span class="meta">    DisplayName = <span class="meta-string">"PetBlock"</span>,</span></span><br><span class="line"><span class="meta">    GUID = <span class="meta-string">"ebbdbefb-b0e1-40fd-a13e-f408c16ee1fd"</span>,</span></span><br><span class="line"><span class="meta">    Description = <span class="meta-string">""</span>)</span>]</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">PetBlock</span> : <span class="title">BlockData</span></span><br><span class="line">&#123;</span><br><span class="line">    [<span class="meta">CultureSpecific</span>]</span><br><span class="line">    [<span class="meta">Display(</span></span><br><span class="line"><span class="meta">        Name = <span class="meta-string">"Name"</span>,</span></span><br><span class="line"><span class="meta">        Description = <span class="meta-string">"Name field's description"</span>,</span></span><br><span class="line"><span class="meta">        GroupName = SystemTabNames.Content,</span></span><br><span class="line"><span class="meta">        Order = 1)</span>]</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keyword">string</span> Name &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>And add it to your <code>StartPage</code> page model:<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[<span class="meta">ContentType(</span></span><br><span class="line"><span class="meta">    DisplayName = <span class="meta-string">"StartPage"</span>,</span></span><br><span class="line"><span class="meta">    GUID = <span class="meta-string">"8205d905-b467-4d0c-ae2c-391d0640456a"</span>,</span></span><br><span class="line"><span class="meta">    Description = <span class="meta-string">""</span>)</span>]</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">StartPage</span> : <span class="title">PageData</span></span><br><span class="line">&#123;</span><br><span class="line">    [<span class="meta">Display(</span></span><br><span class="line"><span class="meta">        Name = <span class="meta-string">"Pet"</span>,</span></span><br><span class="line"><span class="meta">        GroupName = SystemTabNames.Content,</span></span><br><span class="line"><span class="meta">        Order = 5)</span>]</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">virtual</span> PetBlock PetBlock &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>And there you have it! Whatever is you set the <code>Name</code> property to in the <code>Display</code> attribute, that will be your title in the all properties view!</p>
 <p>Using blocks as properties is what allowed me to make an interseting feature i will describe in one of the future blog posts.</p>
 <hr>
-<p><em>To take screenshots I use <a href="https://app.prntscr.com/" target="_blank" rel="external">LightShot</a></em></p>
+<p><em>To take screenshots I use <a href="https://app.prntscr.com/" target="_blank" rel="noopener">LightShot</a></em></p>
 
       </div>
       <footer class="article-footer">
-        <a data-url="https://developerschallenges.com/2017/04/22/episerver-how-to-get-title-in-all-properties-view/" data-id="cjdjdlkm8000i90sr6xp50q3g" class="article-share-link">Share</a>
+        <a data-url="https://developerschallenges.com/2017/04/22/episerver-how-to-get-title-in-all-properties-view/" data-id="cjy68989k000hdcsrpuxrvbtu" class="article-share-link">Share</a>
         
           <a href="https://developerschallenges.com/2017/04/22/episerver-how-to-get-title-in-all-properties-view/#comments" class="article-comment-link">Comments</a>
         
@@ -226,6 +226,23 @@ ga('send', 'pageview');
         
           <li>
             <div class="item-thumbnail">
+              <a href="/2019/07/16/azure-subscription-chooser-powershell-script/" class="thumbnail">
+  
+    <span style="background-image:url(/images/posts/2019-07-16-azure-subscription-chooser-powershell-script/hero.png
+)" title="Azure Subscription Chooser PowerShell Script" class="thumbnail-image"></span>
+  
+
+</a>
+            </div>
+            <div class="item-inner">
+              <p class="item-category"></p>
+              <p class="item-title"><a href="/2019/07/16/azure-subscription-chooser-powershell-script/" class="title">Azure Subscription Chooser PowerShell Script</a></p>
+              <p class="item-date"><time datetime="2019-07-15T22:00:00.000Z" itemprop="datePublished">2019-07-16</time></p>
+            </div>
+          </li>
+        
+          <li>
+            <div class="item-thumbnail">
               <a href="/2018/02/11/ndc-london-2018-recap/" class="thumbnail">
   
     <span style="background-image:url(/images/posts/2018-02-11-ndc-london-2018-recap/hero.png
@@ -292,23 +309,6 @@ ga('send', 'pageview');
             </div>
           </li>
         
-          <li>
-            <div class="item-thumbnail">
-              <a href="/2017/11/02/episerver-all-properties-component-for-showing-and-hiding-content-using-a-drop-down/" class="thumbnail">
-  
-    <span style="background-image:url(/images/posts/2017-11-02-episerver-all-properties-component-for-showing-and-hiding-content-using-a-drop-down/hero.png
-)" title="Episerver: All Properties component for showing and hiding content using a drop-down" class="thumbnail-image"></span>
-  
-
-</a>
-            </div>
-            <div class="item-inner">
-              <p class="item-category"></p>
-              <p class="item-title"><a href="/2017/11/02/episerver-all-properties-component-for-showing-and-hiding-content-using-a-drop-down/" class="title">Episerver: All Properties component for showing and hiding content using a drop-down</a></p>
-              <p class="item-date"><time datetime="2017-11-01T23:00:00.000Z" itemprop="datePublished">2017-11-02</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -357,7 +357,7 @@ ga('send', 'pageview');
         <p class="logo-wrap">
           <a href="/">Developer&#39;s Challenges</a>
         </p>
-        <p>&copy; 2018 Dalibor Mesarić</p>
+        <p>&copy; 2019 Dalibor Mesarić</p>
         <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a></p>
       </div>
     </div>

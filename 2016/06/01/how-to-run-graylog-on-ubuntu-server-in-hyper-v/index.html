@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <title>How to run Graylog on Ubuntu Server in Hyper-V | Developer&#39;s Challenges</title>
@@ -31,18 +31,18 @@
 	<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
 	<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 	<link rel="manifest" href="/manifest.json">
-  <meta name="msapplication-TileColor" content="#3b8dbd"/>
+  <meta name="msapplication-TileColor" content="#3b8dbd">
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-  <meta name="application-name" content="How to run Graylog on Ubuntu Server in Hyper-V | Developer&#39;s Challenges"/>
-  <meta name="msapplication-square70x70logo" content="/ms-icon-70x70.png"/>
-  <meta name="msapplication-square150x150logo" content="/ms-icon-150x150.png"/>
-  <meta name="msapplication-square310x310logo" content="/ms-icon-310x310.png"/>
-  <meta name="msapplication-notification" content="frequency=30;polling-uri=http://notifications.buildmypinnedsite.com/?feed=https://developerschallenges.com/atom.xml&amp;id=1;polling-uri2=http://notifications.buildmypinnedsite.com/?feed=https://developerschallenges.com/atom.xml&amp;id=2;polling-uri3=http://notifications.buildmypinnedsite.com/?feed=https://developerschallenges.com/atom.xml&amp;id=3;polling-uri4=http://notifications.buildmypinnedsite.com/?feed=https://developerschallenges.com/atom.xml&amp;id=4;polling-uri5=http://notifications.buildmypinnedsite.com/?feed=https://developerschallenges.com/atom.xml&amp;id=5; cycle=1"/>
+  <meta name="application-name" content="How to run Graylog on Ubuntu Server in Hyper-V | Developer&#39;s Challenges">
+  <meta name="msapplication-square70x70logo" content="/ms-icon-70x70.png">
+  <meta name="msapplication-square150x150logo" content="/ms-icon-150x150.png">
+  <meta name="msapplication-square310x310logo" content="/ms-icon-310x310.png">
+  <meta name="msapplication-notification" content="frequency=30;polling-uri=http://notifications.buildmypinnedsite.com/?feed=https://developerschallenges.com/atom.xml&amp;id=1;polling-uri2=http://notifications.buildmypinnedsite.com/?feed=https://developerschallenges.com/atom.xml&amp;id=2;polling-uri3=http://notifications.buildmypinnedsite.com/?feed=https://developerschallenges.com/atom.xml&amp;id=3;polling-uri4=http://notifications.buildmypinnedsite.com/?feed=https://developerschallenges.com/atom.xml&amp;id=4;polling-uri5=http://notifications.buildmypinnedsite.com/?feed=https://developerschallenges.com/atom.xml&amp;id=5; cycle=1">
 	<meta name="theme-color" content="#3b8dbd">
   
 
@@ -68,12 +68,12 @@ ga('send', 'pageview');
   
 
   
-    <link href='//fonts.googleapis.com/css?family=Titillium+Web:300,400,600' rel='stylesheet' type='text/css'>
+    <link href="//fonts.googleapis.com/css?family=Titillium+Web:300,400,600" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
 
 </head>
-
+</html>
 <body>
   <div id="wrap">
     <header id="header">
@@ -140,19 +140,19 @@ ga('send', 'pageview');
         <p><img src="/images/posts/2016-06-01-how-to-run-graylog-on-ubuntu-server-in-hyper-v/2016-06-01-how-to-run-graylog-on-ubuntu-server-in-hyper-v.png"></p>
 <p>I wanted to set up Graylog log management tool on an Ubuntu Server running in Hyper-V. It has been a while since the last time I did this, and couple of things have changed…<br><a id="more"></a></p>
 <hr>
-<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p><a href="https://www.graylog.org/" target="_blank" rel="external">Graylog</a> is a log management tool that I first discovered a couple of years ago. I appreciate logging and monitoring while developing software for both capturing errors and seeing if anyone is actually using/testing the features you implemented. Having a centralized log management tool is very convenient to have an entire team aware of what is going on in software projects. Graylog is easy to set up and it has a nice dashboard with a powerful way of querying logs.</p>
-<p>When I first set up Graylog it was called Graylog2 and it was still in pre-release phase. I knew I want to run an Ubuntu Server instance in an Azure VM. Since I’m a windows developer, setting up all the dependencies through bash is not something I enjoy, but luckily I found a cool script by <a href="https://twitter.com/mrlesmithjr" target="_blank" rel="external">@mrlesmithjr</a> on his <a href="http://everythingshouldbevirtual.com/ubuntu-12-04-graylog2-installation" target="_blank" rel="external">blog</a>. The process was pretty straightforward, and in couple of minutes I had Graylog2 running in an Azure VM. After that, all I had to was open the correct port and add GELF log4net provider to my project, and logs started streaming in.</p>
-<p>Two years later, or now, I wanted to do the same thing, but of course the new versions of Graylog and its dependencies came out. So in order to run the latest and greatest I went back to the script I used the first time. Unfortunately, the author stopped the maintenance because he switched to a different way of managing software tools - using <a href="https://www.ansible.com/" target="_blank" rel="external">Ansible</a>. This is not something I am interested investing in at the moment. All I wanted was a Graylog server on my Hyper-V VM. How hard can that be?</p>
-<h2 id="Graylog-running-in-Hyper-V"><a href="#Graylog-running-in-Hyper-V" class="headerlink" title="Graylog running in Hyper-V"></a>Graylog running in Hyper-V</h2><p>When you go to the Graylog’s <a href="https://www.graylog.org/download" target="_blank" rel="external">download page</a> you get a number of options to choose from. But if you are a .NET developer you’ll see a lot of things you have never heard of. Feel free to explore a bit because you never know what you might find interesting. But to proceed with the mission of running Graylog in Hyper-V, <a href="https://en.wikipedia.org/wiki/Open_Virtualization_Format" target="_blank" rel="external"><strong>OVA</strong></a> is what you want.</p>
-<p><strong>OVA</strong> is an open standard for distributing virtual appliances. When you click the link on Graylog’s download page, you’ll see more details on how to use it inside <a href="https://www.virtualbox.org/" target="_blank" rel="external">VirtualBox</a>. You will also need to download VirtualBox in order to create a .VHD disk image that you will use in Hyper-V.</p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p><a href="https://www.graylog.org/" target="_blank" rel="noopener">Graylog</a> is a log management tool that I first discovered a couple of years ago. I appreciate logging and monitoring while developing software for both capturing errors and seeing if anyone is actually using/testing the features you implemented. Having a centralized log management tool is very convenient to have an entire team aware of what is going on in software projects. Graylog is easy to set up and it has a nice dashboard with a powerful way of querying logs.</p>
+<p>When I first set up Graylog it was called Graylog2 and it was still in pre-release phase. I knew I want to run an Ubuntu Server instance in an Azure VM. Since I’m a windows developer, setting up all the dependencies through bash is not something I enjoy, but luckily I found a cool script by <a href="https://twitter.com/mrlesmithjr" target="_blank" rel="noopener">@mrlesmithjr</a> on his <a href="http://everythingshouldbevirtual.com/ubuntu-12-04-graylog2-installation" target="_blank" rel="noopener">blog</a>. The process was pretty straightforward, and in couple of minutes I had Graylog2 running in an Azure VM. After that, all I had to was open the correct port and add GELF log4net provider to my project, and logs started streaming in.</p>
+<p>Two years later, or now, I wanted to do the same thing, but of course the new versions of Graylog and its dependencies came out. So in order to run the latest and greatest I went back to the script I used the first time. Unfortunately, the author stopped the maintenance because he switched to a different way of managing software tools - using <a href="https://www.ansible.com/" target="_blank" rel="noopener">Ansible</a>. This is not something I am interested investing in at the moment. All I wanted was a Graylog server on my Hyper-V VM. How hard can that be?</p>
+<h2 id="Graylog-running-in-Hyper-V"><a href="#Graylog-running-in-Hyper-V" class="headerlink" title="Graylog running in Hyper-V"></a>Graylog running in Hyper-V</h2><p>When you go to the Graylog’s <a href="https://www.graylog.org/download" target="_blank" rel="noopener">download page</a> you get a number of options to choose from. But if you are a .NET developer you’ll see a lot of things you have never heard of. Feel free to explore a bit because you never know what you might find interesting. But to proceed with the mission of running Graylog in Hyper-V, <a href="https://en.wikipedia.org/wiki/Open_Virtualization_Format" target="_blank" rel="noopener"><strong>OVA</strong></a> is what you want.</p>
+<p><strong>OVA</strong> is an open standard for distributing virtual appliances. When you click the link on Graylog’s download page, you’ll see more details on how to use it inside <a href="https://www.virtualbox.org/" target="_blank" rel="noopener">VirtualBox</a>. You will also need to download VirtualBox in order to create a .VHD disk image that you will use in Hyper-V.</p>
 <p>Quick google search showed me how to get from .OVA to .VHD. You should rename the .OVA extension to .TAR and extract the archive in a folder (e.g. C:\vm).</p>
 <p>After that just run the following command to get the .VHD disk image.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">C:\Program Files\Oracle\VirtualBox&gt;VBoxManage.exe clonehd --format vhd C:\vm\graylog-disk1.vmdk C:\vm\graylog.vhd</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\Oracle\VirtualBox&gt;VBoxManage.exe clonehd --format vhd C:\vm\graylog-disk1.vmdk C:\vm\graylog.vhd</span><br></pre></td></tr></table></figure>
 <p>As a final step all you need to do is create a new Virtual Machine in Hyper-V, and attach the .VHD file. Make sure your VM has enough RAM (4GB is recommended).</p>
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>To recap:</p>
 <ol>
-<li>Download <a href="http://docs.graylog.org/en/2.0/pages/installation/virtual_machine_appliances.html" target="_blank" rel="external">Graylog</a></li>
-<li>Download <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="external">VirtualBox</a></li>
+<li>Download <a href="http://docs.graylog.org/en/2.0/pages/installation/virtual_machine_appliances.html" target="_blank" rel="noopener">Graylog</a></li>
+<li>Download <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="noopener">VirtualBox</a></li>
 <li>Rename extension .OVA to .TAR and extract to <em>C:\vm</em></li>
 <li>Run <em>C:\Program Files\Oracle\VirtualBox&gt;VBoxManage.exe clonehd –format vhd C:\vm\graylog-disk1.vmdk C:\vm\graylog.vhd</em></li>
 <li>Create a VM with 4GB of RAM in Hyper-V and attach .VHD that you created</li>
@@ -160,7 +160,7 @@ ga('send', 'pageview');
 
       </div>
       <footer class="article-footer">
-        <a data-url="https://developerschallenges.com/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/" data-id="cjdjdlklu000890sr484iiv35" class="article-share-link">Share</a>
+        <a data-url="https://developerschallenges.com/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/" data-id="cjy68989f000ddcsrk3619v06" class="article-share-link">Share</a>
         
           <a href="https://developerschallenges.com/2016/06/01/how-to-run-graylog-on-ubuntu-server-in-hyper-v/#comments" class="article-comment-link">Comments</a>
         
@@ -222,6 +222,23 @@ ga('send', 'pageview');
     <h3 class="widget-title">recent articles</h3>
     <div class="widget">
       <ul id="recent-post">
+        
+          <li>
+            <div class="item-thumbnail">
+              <a href="/2019/07/16/azure-subscription-chooser-powershell-script/" class="thumbnail">
+  
+    <span style="background-image:url(/images/posts/2019-07-16-azure-subscription-chooser-powershell-script/hero.png
+)" title="Azure Subscription Chooser PowerShell Script" class="thumbnail-image"></span>
+  
+
+</a>
+            </div>
+            <div class="item-inner">
+              <p class="item-category"></p>
+              <p class="item-title"><a href="/2019/07/16/azure-subscription-chooser-powershell-script/" class="title">Azure Subscription Chooser PowerShell Script</a></p>
+              <p class="item-date"><time datetime="2019-07-15T22:00:00.000Z" itemprop="datePublished">2019-07-16</time></p>
+            </div>
+          </li>
         
           <li>
             <div class="item-thumbnail">
@@ -291,23 +308,6 @@ ga('send', 'pageview');
             </div>
           </li>
         
-          <li>
-            <div class="item-thumbnail">
-              <a href="/2017/11/02/episerver-all-properties-component-for-showing-and-hiding-content-using-a-drop-down/" class="thumbnail">
-  
-    <span style="background-image:url(/images/posts/2017-11-02-episerver-all-properties-component-for-showing-and-hiding-content-using-a-drop-down/hero.png
-)" title="Episerver: All Properties component for showing and hiding content using a drop-down" class="thumbnail-image"></span>
-  
-
-</a>
-            </div>
-            <div class="item-inner">
-              <p class="item-category"></p>
-              <p class="item-title"><a href="/2017/11/02/episerver-all-properties-component-for-showing-and-hiding-content-using-a-drop-down/" class="title">Episerver: All Properties component for showing and hiding content using a drop-down</a></p>
-              <p class="item-date"><time datetime="2017-11-01T23:00:00.000Z" itemprop="datePublished">2017-11-02</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -356,7 +356,7 @@ ga('send', 'pageview');
         <p class="logo-wrap">
           <a href="/">Developer&#39;s Challenges</a>
         </p>
-        <p>&copy; 2018 Dalibor Mesarić</p>
+        <p>&copy; 2019 Dalibor Mesarić</p>
         <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a></p>
       </div>
     </div>
