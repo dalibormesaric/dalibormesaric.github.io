@@ -104,8 +104,8 @@ html {
 body {
   height: 100%;
   background-color: #ffffff;
-  background-image: url("images/overlay.png"), -webkit-gradient(linear, left top, left bottom, from(0), color-stop(5%, rgba(208, 208, 208, 0.5)), to(rgba(0, 228, 255, 0.35)));
-  background-image: url("images/overlay.png"), linear-gradient(0, rgba(208, 208, 208, 0.5) 5%, rgba(0, 228, 255, 0.35));
+  background-image: url("images/overlay.png"), -webkit-gradient(linear, left top, left bottom, from(0), color-stop(rgba(0, 120, 213, 0.5)), to(rgba(81, 43, 211, 0.5)));
+  background-image: url("images/overlay.png"), linear-gradient(0, rgba(0, 120, 213, 0.5), rgba(81, 43, 211, 0.5));
   background-repeat: repeat,			no-repeat,			no-repeat;
   background-size: 100px 100px,	cover,				cover;
   background-position: top left,		center center,		bottom center;
@@ -123,7 +123,7 @@ body:after {
   opacity: 0;
   z-index: 1;
   background-color: #ffffff;
-  background-image: url("images/overlay.png"), linear-gradient(60deg, rgba(208, 208, 208, 0.5) 5%, rgba(0, 228, 255, 0.35));
+  background-image: url("images/overlay.png"), linear-gradient(60deg, rgba(0, 120, 213, 0.5), rgba(81, 43, 211, 0.5));
   background-repeat: repeat,			no-repeat;
   background-size: 100px 100px,	cover;
   background-position: top left,		center center;
@@ -172,7 +172,7 @@ a:before {
 }
 
 a:hover {
-  color: #ff7496;
+  color: #313f47;
 }
 
 strong, b {
@@ -357,7 +357,7 @@ input[type="email"]:focus,
 input[type="tel"]:focus,
 select:focus,
 textarea:focus {
-  border-color: #ff7496;
+  border-color: #313f47;
 }
 
 select {
@@ -453,13 +453,13 @@ input[type="radio"] + label:before {
 
 input[type="checkbox"]:checked + label:before,
 input[type="radio"]:checked + label:before {
-  color: #ff7496;
+  color: #313f47;
   content: '\f00c';
 }
 
 input[type="checkbox"]:focus + label:before,
 input[type="radio"]:focus + label:before {
-  border-color: #ff7496;
+  border-color: #313f47;
 }
 
 input[type="checkbox"] + label:before {
@@ -740,7 +740,7 @@ ul.icons li a:before {
 }
 
 ul.icons li a:hover:before {
-  text-shadow: 1.25px 0px 0px #ff7496, -1.25px 0px 0px #ff7496, 0px 1.25px 0px #ff7496, 0px -1.25px 0px #ff7496;
+  text-shadow: 1.25px 0px 0px #313f47, -1.25px 0px 0px #313f47, 0px 1.25px 0px #313f47, 0px -1.25px 0px #313f47;
 }
 
 ul.icons li a:before {
@@ -756,7 +756,7 @@ ul.icons li a:before {
 }
 
 ul.icons li a:hover {
-  border-color: #ff7496;
+  border-color: #313f47;
 }
 
 @media screen and (max-width: 480px) {
@@ -796,8 +796,8 @@ input[type="reset"]:hover,
 input[type="button"]:hover,
 button:hover,
 .button:hover {
-  border-color: #ff7496;
-  color: #ff7496 !important;
+  border-color: #313f47;
+  color: #313f47 !important;
 }
 
 input[type="submit"].icon,
