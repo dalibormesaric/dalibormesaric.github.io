@@ -1,5 +1,4 @@
 @import url("fontawesome-all.min.css");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300");
 /*
 	Identity by HTML5 UP
 	html5up.net | @ajlkn
@@ -138,11 +137,11 @@ body.is-preload:after {
 /* Type */
 body, input, select, textarea {
   color: #414f57;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
   font-size: 14pt;
   font-weight: 300;
   line-height: 2;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
 }
 
@@ -200,7 +199,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 h1 {
   font-size: 1.85em;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.12em;
   margin: 0 0 0.525em 0;
 }
 
@@ -941,7 +940,7 @@ body.is-preload #main {
 
 #footer .copyright li {
   display: inline-block;
-  margin: 0 0 0 0.45em;
+  margin: 0 0 0 0.55em;
   padding: 0 0 0 0.85em;
   border-left: solid 1px rgba(255, 255, 255, 0.5);
   line-height: 1;
